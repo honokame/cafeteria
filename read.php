@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>メニューデータから読み込む</title>
+<body>
+<?php
+
+// データベース接続設定
+$sv = "localhost";
+$dbname = "team3db";
+$user = "team3";
+$pass = "1qazxsw23edc";
+
+// 表示文字コード
+$display_enc = "UTF-8";
+
+// 関数ーデータの文字コードを変換
+function conv_dbdata($string,$enc){
+  $det_enc = mb_detect_encoding($string); // エンコーディングを返す
+  
+  // 何しとるか分からん、変換したいコードに変換してるっぽい
+  if($det_enc and $det_enc != $enc){
+    return mb_convert_encoding($string,$enc,$det_enc);
+  }   
+  else{
+    return $string;
+  }
+}
+
+// データベースに接続
+$dbconn = pg_connect("host = localhost dbname = team3db user = team3 password = 1qazxsw23edc") or die("接続エラー");
+
+// データを取り出す
+$sql = "SELECT menu,price,cal,allEval,sold FROM menu";
+$res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
+
+// 取り出したデータを表示
+for($i = 0;$i < pg_numrows($res);$i++){
+  $row = pg_fetch_array($res,$i,PGSQL_ASSOC);
+  echo "<tr>";
+  echo "<tb>".$row["menu"]."</tb>";
+  echo "<tb>".$row["price"]."</td>";
+}
+// 接続を解除
+pg_close($dbconn);
+
+?>
+</body>
+</head>
