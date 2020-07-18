@@ -36,11 +36,23 @@ $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 // 取り出したデータを表示
 for($i = 0;$i < pg_numrows($res);$i++){
   $row = pg_fetch_array($res,$i,PGSQL_ASSOC);
-  echo "<tr>";
   echo "<tb>".$row["menu"]."</tb>";
-  echo "<tb>".$row["price"]."</td>";
-  
-}
+  echo "<tb>".$row["type"]."</td>";
+  echo "￥";
+  echo "<tb>".$row["price"]."</tb>";
+  // echo "<tb>".$row["cal"]."</tb>";
+  // echo "Kcal";
+  echo "<tb>".$row["allEval"]."</tb>";
+
+  // 売り切れ情報を記号で表示
+  if($row["sold"] == 't'){
+    echo "<tb>".'○'."</tb>";
+  }else if($row["sold"] == 'f'){
+    echo "<tb>".'×'."</tb>";
+  }
+  echo "<tb>".$row["date"]."</tb>";
+} 
+
 // 接続を解除
 pg_close($dbconn);
 
