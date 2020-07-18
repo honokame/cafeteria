@@ -6,7 +6,7 @@
 
 // データベース接続設定
 $sv = "localhost";
-$dbname = "team3db";
+$name = "team3db";
 $user = "team3";
 $pass = "1qazxsw23edc";
 
@@ -27,7 +27,7 @@ function conv_dbdata($string,$enc){
 }
 
 // データベースに接続
-$dbconn = pg_connect("host = localhost dbname = team3db user = team3 password = 1qazxsw23edc") or die("接続エラー");
+$dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
 
 // データを取り出す
 $sql = "SELECT menu,price,cal,allEval,sold FROM menu";
@@ -39,6 +39,7 @@ for($i = 0;$i < pg_numrows($res);$i++){
   echo "<tr>";
   echo "<tb>".$row["menu"]."</tb>";
   echo "<tb>".$row["price"]."</td>";
+  
 }
 // 接続を解除
 pg_close($dbconn);
