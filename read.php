@@ -1,7 +1,3 @@
-<html>
-<head>
-<title>メニューデータから読み込む</title>
-<body>
 <?php
 
 // データベース接続設定
@@ -57,5 +53,3 @@ for($i = 0;$i < pg_numrows($res);$i++){
 pg_close($dbconn);
 
 ?>
-</body>
-</head>
