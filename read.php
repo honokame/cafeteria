@@ -30,7 +30,7 @@ function conv_dbdata($string,$enc){
 $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
 
 // データを取り出す
-$sql = "SELECT menu,price,cal,allEval,sold FROM menu";
+$sql = "SELECT menu,type,price,cal,alleval,sold,date FROM menu";
 $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 
 // 取り出したデータを表示
@@ -40,9 +40,9 @@ for($i = 0;$i < pg_numrows($res);$i++){
   echo "<tb>".$row["type"]."</td>";
   echo "￥";
   echo "<tb>".$row["price"]."</tb>";
-  // echo "<tb>".$row["cal"]."</tb>";
-  // echo "Kcal";
-  echo "<tb>".$row["allEval"]."</tb>";
+  echo "<tb>".$row["cal"]."</tb>";
+  echo "Kcal";
+  echo "<tb>".$row["alleval"]."</tb>";
 
   // 売り切れ情報を記号で表示
   if($row["sold"] == 't'){
@@ -51,7 +51,7 @@ for($i = 0;$i < pg_numrows($res);$i++){
     echo "<tb>".'×'."</tb>";
   }
   echo "<tb>".$row["date"]."</tb>";
-} 
+}  
 
 // 接続を解除
 pg_close($dbconn);
