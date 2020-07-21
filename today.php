@@ -41,23 +41,29 @@ $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 // 取り出したデータを表示
 for($i = 0;$i < pg_numrows($res);$i++){
   $row = pg_fetch_array($res,$i,PGSQL_ASSOC);
-  // echo $row["date"];
 
-  if($row["date"] == $today){
-    echo $row["menu"];
-    $row["type"];
-    echo "￥".$row["price"];
-    echo $row["cal"]."Kcal";
-    $row["alleval"];
-
-    // 売り切れ情報を記号で表示
-    if($row["sold"] == 't'){
-      echo '○';
-    }else if($row["sold"] == 'f'){
-      echo '×';
-    }
+  // Aセット
+  if($row["date"] == $today && $row["type"] == 0){
+    $dayA["menu"] = $row["menu"];
+    $dayA["price"] = $row["price"];
+    $dayA["cal"] = $row["cal"];
+    $dayA["alleval"] = $row["alleval"];
+    $dayA["sold"] = $row["sold"];
+  }
+  
+  // Bセット
+  else if($row["date"] == $today && $row["type"] == 1){
+    $dayB["menu"] = $row["menu"];
+    $dayB["price"] = $row["price"];
+    $dayB["cal"] = $row["cal"];
+    $dayB["alleval"] = $row["alleval"];
+    $dayB["sold"] = $row["sold"];
   }
 }  
+  
+  // 表示確認用
+  // echo $dayA["menu"].$dayA["price"].$dayA["cal"];
+  // echo $dayB["menu"].$dayB["price"].$dayB["cal"];
 
 // 接続を解除
 pg_close($dbconn);
