@@ -35,10 +35,10 @@ function conv_dbdata($string,$enc){
 $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
 
 // データを取り出す
-$sql = "SELECT menu,type,price,cal,alleval,sold,date FROM menu";
+$sql = "SELECT * FROM menu";
 $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 
-// 取り出したデータを表示
+// A,Bセット情報読み込み 
 for($i = 0;$i < pg_numrows($res);$i++){
   $row = pg_fetch_array($res,$i,PGSQL_ASSOC);
 
@@ -47,23 +47,35 @@ for($i = 0;$i < pg_numrows($res);$i++){
     $dayA["menu"] = $row["menu"];
     $dayA["price"] = $row["price"];
     $dayA["cal"] = $row["cal"];
-    $dayA["alleval"] = $row["alleval"];
     $dayA["sold"] = $row["sold"];
   }
-  
+
   // Bセット
-  else if($row["date"] == $today && $row["type"] == 1){
+  else if ($row["date"] == $today && $row["type"] == 1) {
     $dayB["menu"] = $row["menu"];
     $dayB["price"] = $row["price"];
     $dayB["cal"] = $row["cal"];
-    $dayB["alleval"] = $row["alleval"];
     $dayB["sold"] = $row["sold"];
   }
-}  
-  
-  // 表示確認用
-  // echo $dayA["menu"].$dayA["price"].$dayA["cal"];
-  // echo $dayB["menu"].$dayB["price"].$dayB["cal"];
+}
+
+// 常設メニュー読み込み
+$rowN = pg_fetch_all($res);
+$dayN = array();
+foreach ($rowN as $normal) {
+  if ($normal["type"] == 2) {
+    array_push($dayN, $normal);
+  }
+}
+
+echo $dayN[0]["sold"];
+echo $dayN[0]["cal"];
+echo $dayN[1]["menu"];
+
+// 表示確認用
+//echo $dayA["menu"].$dayA["price"].$dayA["cal"];
+//echo $dayB["menu"].$dayB["price"].$dayB["cal"];
+// echo $normal;
 
 // 接続を解除
 pg_close($dbconn);
