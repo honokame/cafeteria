@@ -71,6 +71,13 @@ foreach($rowN as $normal){ // normalにrowNを順番に入れる
   }
 }
 
+// 週間メニュー読み込み
+// 常設メニューのように配列で読む
+// weekABで配列初期化
+// foreachでまわして、日付より未来＞AorB>arrraypush、５日分だけ>めんどくさいしぜんぶいれてもいよさそ
+// 表示
+// 配列はじめから表示したい日数
+
 // 表示確認用
 echo $dayA["menu"].$dayA["price"].$dayA["cal"];
 echo $dayB["menu"].$dayB["price"].$dayB["cal"];
