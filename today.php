@@ -1,12 +1,13 @@
 <?php
 
 // 年月日取得
-$date = getdate();
+// $date = getdate();
 // echo $date["year"];
 // echo $date["mon"];
 // echo $date["mday"];
 
-$today = '2020-07-27';
+$today = date('Y-m-d');
+// $today = '2020-07-27';
 echo "今日は".$today."\n";
 
 // データベース接続設定
@@ -38,7 +39,7 @@ $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") 
 $sql = "SELECT * FROM menu";
 $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 
-// A,Bセット情報読み込み 
+// A,Bセット読み込み 
 for($i = 0;$i < pg_numrows($res);$i++){
   $row = pg_fetch_array($res,$i,PGSQL_ASSOC);
 
@@ -51,7 +52,7 @@ for($i = 0;$i < pg_numrows($res);$i++){
   }
 
   // Bセット
-  else if ($row["date"] == $today && $row["type"] == 1) {
+  else if($row["date"] == $today && $row["type"] == 1){
     $dayB["menu"] = $row["menu"];
     $dayB["price"] = $row["price"];
     $dayB["cal"] = $row["cal"];
@@ -60,22 +61,21 @@ for($i = 0;$i < pg_numrows($res);$i++){
 }
 
 // 常設メニュー読み込み
-$rowN = pg_fetch_all($res);
-$dayN = array();
-foreach ($rowN as $normal) {
-  if ($normal["type"] == 2) {
-    array_push($dayN, $normal);
+$rowN = pg_fetch_all($res); 
+$dayN = array(); // 常設メニューの配列
+
+foreach($rowN as $normal){ // normalにrowNを順番に入れる  
+  // 常設のみdayN配列に格納
+  if($normal["type"] == 2){
+    array_push($dayN,$normal);
   }
 }
 
-echo $dayN[0]["sold"];
-echo $dayN[0]["cal"];
-echo $dayN[1]["menu"];
-
 // 表示確認用
-//echo $dayA["menu"].$dayA["price"].$dayA["cal"];
-//echo $dayB["menu"].$dayB["price"].$dayB["cal"];
-// echo $normal;
+echo $dayA["menu"].$dayA["price"].$dayA["cal"];
+echo $dayB["menu"].$dayB["price"].$dayB["cal"];
+echo $dayN[0]["menu"].$dayN[0]["price"];
+echo $dayN[1]["menu"].$dayN[1]["price"];
 
 // 接続を解除
 pg_close($dbconn);
