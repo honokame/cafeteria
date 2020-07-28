@@ -61,10 +61,10 @@ for($i = 0;$i < pg_numrows($res);$i++){
 }
 
 // 常設メニュー読み込み
-$rowN = pg_fetch_all($res); 
+$row = pg_fetch_all($res); 
 $dayN = array(); // 常設メニューの配列
 
-foreach($rowN as $normal){ // normalにrowNを順番に入れる  
+foreach($row as $normal){ // normalにrowNを順番に入れる  
   // 常設のみdayN配列に格納
   if($normal["type"] == 2){
     array_push($dayN,$normal);
@@ -72,18 +72,29 @@ foreach($rowN as $normal){ // normalにrowNを順番に入れる
 }
 
 // 週間メニュー読み込み
-// 常設メニューのように配列で読む
-// weekABで配列初期化
-// foreachでまわして、日付より未来＞AorB>arrraypush、５日分だけ>めんどくさいしぜんぶいれてもいよさそ
-// 表示
-// 配列はじめから表示したい日数
+$weekA = array();
+$weekB = array();
+
+foreach($row as $week){
+  
+  // 当日以降のメニューのみ
+  if(strtotime($today) < strtotime($week["date"])){ 
+    if($week["type"] == 0){
+      array_push($weekA,$week);
+    }else if($week["type"] == 1){
+      array_push($weekB,$week);
+    }
+  }
+}
 
 // 表示確認用
-echo $dayA["menu"].$dayA["price"].$dayA["cal"];
-echo $dayB["menu"].$dayB["price"].$dayB["cal"];
-echo $dayN[0]["menu"].$dayN[0]["price"];
-echo $dayN[1]["menu"].$dayN[1]["price"];
-
+//echo $dayA["menu"].$dayA["price"].$dayA["cal"];
+//echo $dayB["menu"].$dayB["price"].$dayB["cal"];
+//echo $dayN[0]["menu"].$dayN[0]["price"];
+//echo $dayN[1]["menu"].$dayN[1]["price"];
+//for($j = 0;$j < 5;$j++){
+//  echo $weekB[$j]["menu"].$weekB[$j]["cal"];
+//}
 // 接続を解除
 pg_close($dbconn);
 
