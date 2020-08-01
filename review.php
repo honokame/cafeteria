@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
 </head>
 
 <body>
-  <!-- 星の表示 -->
-  
-  
   <!-- 星の細かいパラメータ -->
   <style type="text/css">
     .evaluation {
@@ -46,9 +42,11 @@
     }
   </style>
 
-  <form action="review.php" method="POST">コメント<br />
-   
-      <div class="evaluation">
+  <!-- 送信フォーム -->
+  <form action="review.php" method="POST">
+    
+    <!-- 星の表示 -->
+    <div class="evaluation">
       <input id="star1" type="radio" name="star" value="5" />
       <label for="star1">★</label>
       <input id="star2" type="radio" name="star" value="4" />
@@ -60,9 +58,12 @@
       <input id="star5" type="radio" name="star" value="1" />
       <label for="star5">★</label>
     </div>
+
+    <p>コメント</p>
     <textarea name="comment" cols="50" rows="5">
-  </textarea><br /><input type="submit" name="send" value="送信" />
+    </textarea><br /><input type="submit" name="send" value="送信" />
   </form>
+
   <?php
   $display_enc = "UTF-8";
 
@@ -74,17 +75,16 @@
 
   // データベースに接続
   $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
+
+  // レビューが送信されたとき
   if (isset($_POST['send'])) {
     $today = date('Y-m-d');
     $star = $_POST['star'];
-    // echo $star;  
     $comment = $_POST["comment"];
     $sql = "insert into review values('たこ焼き',$star,'$comment','$today')";
     $res = pg_query($dbconn, $sql) or die("データ読み込みエラー");
   }
 
-
   ?>
 </body>
-
 </html>
