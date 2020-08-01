@@ -6,20 +6,10 @@
 </head>
 
 <body>
-  <form type="get" action="#">
-    <div class="evaluation">
-      <input id="star1" type="radio" name="star" value="5" />
-      <label for="star1"><span class="text">最高</span>★</label>
-      <input id="star2" type="radio" name="star" value="4" />
-      <label for="star2"><span class="text">良い</span>★</label>
-      <input id="star3" type="radio" name="star" value="3" />
-      <label for="star3"><span class="text">普通</span>★</label>
-      <input id="star4" type="radio" name="star" value="2" />
-      <label for="star4"><span class="text">悪い</span>★</label>
-      <input id="star5" type="radio" name="star" value="1" />
-      <label for="star5"><span class="text">最悪</span>★</label>
-    </div>
-  </form>
+  <!-- 星の表示 -->
+  
+  
+  <!-- 星の細かいパラメータ -->
   <style type="text/css">
     .evaluation {
       display: flex;
@@ -57,6 +47,19 @@
   </style>
 
   <form action="review.php" method="POST">コメント<br />
+   
+      <div class="evaluation">
+      <input id="star1" type="radio" name="star" value="5" />
+      <label for="star1">★</label>
+      <input id="star2" type="radio" name="star" value="4" />
+      <label for="star2">★</label>
+      <input id="star3" type="radio" name="star" value="3" />
+      <label for="star3">★</label>
+      <input id="star4" type="radio" name="star" value="2" />
+      <label for="star4">★</label>
+      <input id="star5" type="radio" name="star" value="1" />
+      <label for="star5">★</label>
+    </div>
     <textarea name="comment" cols="50" rows="5">
   </textarea><br /><input type="submit" name="send" value="送信" />
   </form>
@@ -73,8 +76,10 @@
   $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
   if (isset($_POST['send'])) {
     $today = date('Y-m-d');
+    $star = $_POST['star'];
+    // echo $star;  
     $comment = $_POST["comment"];
-    $sql = "insert into review values('ハンバーグ',5,'$comment','$today')";
+    $sql = "insert into review values('たこ焼き',$star,'$comment','$today')";
     $res = pg_query($dbconn, $sql) or die("データ読み込みエラー");
   }
 
