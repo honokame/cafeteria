@@ -7,8 +7,9 @@
 </head>
 
 <body>
-  <!-- 星の細かいパラメータ -->
+
   <style type="text/css">
+    /* 星の細かいパラメータ */
     .evaluation {
       display: flex;
       flex-direction: row-reverse;
@@ -44,7 +45,8 @@
       box-sizing: border-box;
     }
 
-    /* ポップアップウインドウの設定 */
+    /* レビューポップアップ */
+    /* ウインドウ */
     .popup {
       background-color: #fff;
       box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
@@ -69,7 +71,7 @@
       display: block;
     }
 
-    /* 閉じるアイコン（右上） */
+    /* 閉じる */
     .icon-close {
       background: #fff;
       color: #808080;
@@ -79,7 +81,7 @@
       right: 0;
     }
 
-    /* 開くボタン */
+    /* 開く */
     .btn-open {
       display: block;
       background-color: #01b6ed;
@@ -98,22 +100,26 @@
       width: 90%;
       font-size: 30px;
     }
-
-    
   </style>
 
   <!-- 送信フォーム -->
+  <!-- レビューを書くボタンを押す -->
   <div class="pop-box">
     <label for="popup-on">
       <div class="btn-open">
         <span>レビューを書く</span>
     </label>
     <input type="checkbox" id="popup-on">
+
+    <!-- 閉じる -->
     <div class="popup">
       <label for="popup-on" class="icon-close">×</label>
+
+      <!-- ウィンドウの中身 -->
       <div class="popup-content">
         <form action="review.php" method="POST">
           たこ焼き<br>
+
           <!-- 星の表示 -->
           <div class="evaluation">
             <input id="star1" type="radio" name="star" value="5" />
@@ -130,14 +136,11 @@
 
           <p>コメント</p>
           <textarea name="comment" placeholder="コメントを入力してください" cols="28" rows="11" style="font-size: 25px;"></textarea><br />
-          <input type="submit" name="send" value="送信"/>
-          </div>
-        </form>
+          <input type="submit" name="send" value="送信" />
       </div>
+      </form>
     </div>
   </div>
-
-
 
   <?php
   $display_enc = "UTF-8";
@@ -168,6 +171,7 @@
   }
 
   ?>
+
 </body>
 
 </html>
