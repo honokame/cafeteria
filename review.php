@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no" />
 </head>
 
 <body>
@@ -23,16 +24,13 @@
       padding: 10px 10px 0;
       color: gray;
       cursor: pointer;
-      font-size: 50px;
+      font-size: 70px;
     }
 
     .evaluation label .text {
       position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      text-align: center;
-      font-size: 12px;
+      text-align: left;
+      font-size: 20px;
       color: gray;
     }
 
@@ -48,17 +46,17 @@
 
     /* ポップアップウインドウの設定 */
     .popup {
-      background-color: #efefef;
+      background-color: #fff;
       box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 10%;
+      left: 0%;
+      right: 0%;
+      bottom: 20%;
       margin: auto;
-      width: 70vw;
-      height: 55vw;
+      width: 600px;
+      height: 800px;
     }
 
     /* チェックボックスの初期設定 */
@@ -73,14 +71,14 @@
 
     /* 閉じるアイコン（右上） */
     .icon-close {
-      background: #000;
-      color: #fff;
-      font-size: 30px;
+      background: #fff;
+      color: #808080;
+      font-size: 80px;
       padding: 0 10px;
       position: absolute;
       right: 0;
     }
-    
+
     /* 開くボタン */
     .btn-open {
       display: block;
@@ -98,41 +96,45 @@
     .popup-content {
       margin: 40px auto 40px auto;
       width: 90%;
+      font-size: 30px;
     }
+
+    
   </style>
 
   <!-- 送信フォーム -->
   <div class="pop-box">
     <label for="popup-on">
-        <div class="btn-open">
-        <span>レビューを書く</span>     
-      </label>
-      <input type="checkbox" id="popup-on">
-      <div class="popup">
-        <label for="popup-on" class="icon-close">×</label>
-        <div class="popup-content">
-          <form action="review.php" method="POST">
+      <div class="btn-open">
+        <span>レビューを書く</span>
+    </label>
+    <input type="checkbox" id="popup-on">
+    <div class="popup">
+      <label for="popup-on" class="icon-close">×</label>
+      <div class="popup-content">
+        <form action="review.php" method="POST">
+          たこ焼き<br>
+          <!-- 星の表示 -->
+          <div class="evaluation">
+            <input id="star1" type="radio" name="star" value="5" />
+            <label for="star1">★</label>
+            <input id="star2" type="radio" name="star" value="4" />
+            <label for="star2">★</label>
+            <input id="star3" type="radio" name="star" value="3" />
+            <label for="star3">★</label>
+            <input id="star4" type="radio" name="star" value="2" />
+            <label for="star4">★</label>
+            <input id="star5" type="radio" name="star" value="1" />
+            <label for="star5">★</label>
+          </div>
 
-            <!-- 星の表示 -->
-            <div class="evaluation">
-              <input id="star1" type="radio" name="star" value="5" />
-              <label for="star1">★</label>
-              <input id="star2" type="radio" name="star" value="4" />
-              <label for="star2">★</label>
-              <input id="star3" type="radio" name="star" value="3" />
-              <label for="star3">★</label>
-              <input id="star4" type="radio" name="star" value="2" />
-              <label for="star4">★</label>
-              <input id="star5" type="radio" name="star" value="1" />
-              <label for="star5">★</label>
-            </div>
-
-            <p>コメント</p>
-            <textarea name="comment" cols="50" rows="5">
-    </textarea><br /><input type="submit" name="send" value="送信" />
-          </form>
-        </div>
+          <p>コメント</p>
+          <textarea name="comment" placeholder="コメントを入力してください" cols="28" rows="11" style="font-size: 25px;"></textarea><br />
+          <input type="submit" name="send" value="送信"/>
+          </div>
+        </form>
       </div>
+    </div>
   </div>
 
 
