@@ -59,7 +59,6 @@
       margin: auto;
       width: 70vw;
       height: 55vw;
-      overflow-y: scroll;
     }
 
     /* チェックボックスの初期設定 */
@@ -81,28 +80,17 @@
       position: absolute;
       right: 0;
     }
-
-    /* 閉じるボタン */
-    .btn-close {
-      background: #000;
-      border-radius: 10px;
-      color: #fff;
-      padding: 10px;
-      cursor: pointer;
-      margin: 10px auto;
-      width: 95%;
-      text-align: center;
-    }
-
+    
     /* 開くボタン */
     .btn-open {
-      background: #fff;
+      display: block;
+      background-color: #01b6ed;
       border-radius: 10px;
-      color: #fff;
+      color: #333;
       padding: 10px;
       cursor: pointer;
       margin: 10px auto;
-      width: 95%;
+      width: 200px;
       text-align: center;
     }
 
@@ -115,8 +103,9 @@
 
   <!-- 送信フォーム -->
   <div class="pop-box">
-    <label for="popup-on"><label for="popup-on">
-        <div class="btn-open"><img src="https://homepagenopro.com/wp-content/uploads/2018/08/d11_img_mizudori.png" alt="" class="layer-img"></div>
+    <label for="popup-on">
+        <div class="btn-open">
+        <span>レビューを書く</span>     
       </label>
       <input type="checkbox" id="popup-on">
       <div class="popup">
@@ -163,6 +152,7 @@
   // レビューが送信されたとき
   if (isset($_POST['send'])) {
     $today = date('Y-m-d');
+    $menu = 'たこ焼き';
     $star = $_POST['star'];
 
     // コメントのみのとき
@@ -171,7 +161,7 @@
     }
 
     $comment = $_POST["comment"];
-    $sql = "insert into review values('たこ焼き',$star,'$comment','$today')";
+    $sql = "insert into review values('$menu',$star,'$comment','$today')";
     $res = pg_query($dbconn, $sql) or die("データ読み込みエラー");
   }
 
