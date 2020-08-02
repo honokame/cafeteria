@@ -80,6 +80,12 @@
   if (isset($_POST['send'])) {
     $today = date('Y-m-d');
     $star = $_POST['star'];
+    
+    // コメントのみのとき
+    if($star == null){
+      $star = 0;
+    }
+    
     $comment = $_POST["comment"];
     $sql = "insert into review values('たこ焼き',$star,'$comment','$today')";
     $res = pg_query($dbconn, $sql) or die("データ読み込みエラー");
