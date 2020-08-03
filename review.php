@@ -22,7 +22,7 @@
 
     .evaluation label {
       position: relative;
-      padding: 10px 10px 0;
+      padding: 18px 18px 0;
       color: gray;
       cursor: pointer;
       font-size: 70px;
@@ -49,16 +49,19 @@
     /* ウインドウ */
     .popup {
       background-color: #fff;
-      box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+      border-radius: 25px;
+      border-color: #cccccc;
+      box-shadow: 0 0 0 9999px rgba(255,255,255,0.5);
       display: none;
       position: fixed;
+      border: solid;
       top: 10%;
       left: 0%;
       right: 0%;
       bottom: 20%;
       margin: auto;
-      width: 600px;
-      height: 800px;
+      width: 800px;
+      height: 900px;
     }
 
     /* チェックボックスの初期設定 */
@@ -73,10 +76,10 @@
 
     /* 閉じる */
     .icon-close {
-      background: #fff;
+      background: rgba(255,255,255,0);
       color: #808080;
-      font-size: 80px;
-      padding: 0 10px;
+      font-size: 100px;
+      padding: 0 40px;
       position: absolute;
       right: 0;
     }
@@ -98,7 +101,22 @@
     .popup-content {
       margin: 40px auto 40px auto;
       width: 90%;
-      font-size: 30px;
+      font-size: 40px;
+    }
+    
+    input#btn_send{
+      background-color: #1a1aff;
+      border-style: none;
+      font-size: 30pt;
+      color: #fff;
+      width: 600px;
+      height: 80px;
+    }
+
+    textarea#review{
+      width: 600px;
+      height: 450px;
+      font-size: 35px;
     }
   </style>
 
@@ -118,7 +136,9 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content">
         <form action="review.php" method="POST">
-          たこ焼き<br>
+          <p style="margin-bottom: 1em;">
+          <p align= "left"><u>たこ焼き</u></p>
+          <p style = "margin-bottom:1em;">
 
           <!-- 星の表示 -->
           <div class="evaluation">
@@ -133,10 +153,10 @@
             <input id="star5" type="radio" name="star" value="1" />
             <label for="star5">★</label>
           </div>
+          <p style="margin-bottom: 2em;">
 
-          <p>コメント</p>
-          <textarea name="comment" placeholder="コメントを入力してください" cols="28" rows="11" style="font-size: 25px;"></textarea><br />
-          <input type="submit" name="send" value="送信" />
+          <textarea id= "review"name="comment" placeholder="コメントを入力してください"></textarea>
+          <input id="btn_send" type="submit" name="send" value="送信"/>
       </div>
       </form>
     </div>
