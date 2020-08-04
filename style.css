@@ -1,0 +1,426 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+    background: #ffffff;
+    font-family: "HanziPen SC";
+}
+
+header.site-header{
+    z-index: 10;
+    background: #ffffff;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    height: 200px;
+    width: 100%;
+    box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+button.logo{
+  z-index: 11;
+  height: 150px;
+  margin: 20px;
+  background: none;/*背景色*/
+  text-align: center;
+  border: none;/*線色*/
+}
+
+button.konzatsu{
+  z-index: 11;
+  height: 120px;
+  margin: 30px;
+  background: none;/*背景色*/
+  text-align: right;
+  border: none;/*線色*/
+}
+
+
+div.hero{
+  max-height: 500px;
+}
+div.hero img{
+  margin-top: 250px;
+  padding: 0px;
+  height: 500px;
+  width: 100%;
+}
+
+h2{
+  margin-top: 350px;
+  text-align: center;
+  font-size: 40px;
+}
+
+h3{
+  margin-top: 500px;
+  text-align: center;
+  font-size: 40px;
+}
+
+h4{
+  margin-top: 200px;
+  text-align: center;
+  font-size: 40px;
+}
+
+div.Aset{
+  width: 49%;
+  float: left;
+  margin-left:3px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+div.Bset{
+  width: 49%;
+  float: right;
+  margin-right:3px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+div.left{
+  width: 32.8%;
+  float:left;
+  margin-left:3px;
+  margin-right: 3px;
+  margin-top:100px;
+  text-align: center;
+}
+
+div.center{
+  width: 32.8%;
+  float:left;
+  margin-top:100px;
+  text-align: center;
+}
+
+div.right{
+  width: 32.8%;
+  float:left;
+  margin-left:3px;
+  margin-right: 3px;
+  margin-top:100px;
+  text-align: center;
+}
+
+
+
+button.button_A{
+  z-index: 1;
+  width: 97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+
+button.button_B{
+  z-index: 1;
+  width:97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+
+button.button_curry{
+  z-index: 1;
+  width: 97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+button.button_miso-ramen{
+  z-index: 1;
+  width: 97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+
+button.button_katsu-curry{
+  z-index: 1;
+  width: 97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+button.button_kakesoba{
+  z-index: 1;
+  width: 97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+
+button.button_curry-udon{
+  z-index: 1;
+  width: 97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+button.button_kakeudon{
+  z-index: 1;
+  width: 97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+button.button_rice{
+  z-index: 1;
+  width: 97%;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 15pt;
+  background: #ffffff;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 6px;/*角の丸み*/
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+
+
+/*売り切れボタン*/
+button.button_urikire {
+  z-index: 2;
+  width: 80px;
+  border: none;
+  padding: 3px;
+  background: #ffffff;
+}
+
+
+
+/*カレンダー*/
+div.DAY1{
+  z-index: 3;
+  width: 33%;
+  float:left;
+  margin: auto;
+  text-align: center;
+}
+
+div.DAY2{
+  z-index: 3;
+  width: 33%;
+  float:left;
+  margin: auto;
+  text-align: center;
+}
+
+div.DAY3{
+  z-index: 3;
+  width: 33%;
+  float:left;
+  margin: auto;
+  text-align: center;
+}
+div.DAY4{
+  z-index: 3;
+  width: 49%;
+  float: left;
+  margin: auto;
+  text-align: center;
+}
+
+div.DAY5{
+  z-index: 3;
+  width: 49%;
+  float: right;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+div.WeeklyMenu {
+  position: relative;
+  margin: 40px auto;
+  width: 300px;
+  height: 300px;
+  background: #ffffff;
+  border: solid 0.5px #000000;/*線色*/
+}
+
+div.WeeklyMenu::before,
+div.WeeklyMenu::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 40%;
+  height: 10px;
+  box-shadow: 0 5px 14px rgba(0,0,0,.7);
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+div.WeeklyMenu::before {
+  left: 15px;
+  transform: skew(-5deg) rotate(-5deg);
+}
+
+div.WeeklyMenu::after {
+  right: 15px;
+  transform: skew(5deg) rotate(5deg);
+}
+
+div.WeeklyMenu:hover::before,
+div.WeeklyMenu:hover::after {
+  box-shadow: 0 2px 14px rgba(0,0,0,.4);
+}
+
+div.WeeklyMenu:hover::before {
+  left: 5px;
+}
+
+div.WeeklyMenu:hover::after {
+  right: 5px;
+}
+
+
+
+footer.site-footer{
+    background: #333;
+    margin-top: 800px;
+    height: 80px;
+
+}
+p.copyright{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*サブページ*/
+div.MenuImage{
+    max-height: 500px;
+
+}
+div.MenuImage img{
+    z-index: auto;
+    width: 400px;
+    margin-top: 250px;
+}
+
+/*レビュー吹き出し*/
+.box25{
+    position: relative;
+    background: #fff0cd;
+    box-shadow: 0px 0px 0px 5px #fff0cd;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+    margin: 40px;
+    height: 50px;
+
+}
+.box25:after{
+    position: absolute;
+    content: '';
+    right: -7px;
+    top: -7px;
+    border-width: 0 15px 15px 0;
+    border-style: solid;
+    border-color: #ffdb88 #fff #ffdb88;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.box25 p {
+    margin: 0;
+    padding: 0;
+}
+
+/*レビュー書き込みボタン*/
+button.button_review{
+  z-index: 1;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 10pt;
+  background: #26a69b;/*背景色*/
+  border: solid 1px #000000;/*線色*/
+  border-radius: 10px;/*角の丸み*/
+  -webkit-tap-highlight-color: transparent;
+  transition: .3s ease-out;/*変化を緩やかに*/
+  width: 50%;
+  height: 60px;
+  padding: 0.2em 1em;/*ボタン内の余白*/
+  letter-spacing: 0.05em;/*字間*/
+  margin-top: 20px;
+  margin-left: 320px;
+  cursor: pointer;
+  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+}
+
+
+button.button_review :hover{
+    box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 7px rgba(0, 0, 0, 0.19);/*浮き上がるように*/
+}
