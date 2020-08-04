@@ -400,24 +400,24 @@ div.MenuImage img{
 
 /*レビュー書き込みボタン*/
 button.button_review{
-  z-index: 1;
+  z-index: 0;
   display: inline-block;
   text-decoration: none;
   color: #FFF;
-  font-size: 10pt;
-  background: #26a69b;/*背景色*/
-  border: solid 1px #000000;/*線色*/
-  border-radius: 10px;/*角の丸み*/
+  font-size: 9pt;
+  background: #25a69b;/*背景色*/
+  border: solid 0px #000000;/*線色*/
+  border-radius: 9px;/*角の丸み*/
   -webkit-tap-highlight-color: transparent;
-  transition: .3s ease-out;/*変化を緩やかに*/
-  width: 50%;
-  height: 60px;
-  padding: 0.2em 1em;/*ボタン内の余白*/
-  letter-spacing: 0.05em;/*字間*/
-  margin-top: 20px;
-  margin-left: 320px;
+  transition: .2s ease-out;/*変化を緩やかに*/
+  width: 49%;
+  height: 59px;
+  padding: -1.2em 1em;/*ボタン内の余白*/
+  letter-spacing: -1.05em;/*字間*/
+  margin-top: 19px;
+  margin-left: 319px;
   cursor: pointer;
-  box-shadow: inset 0 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
+  box-shadow: inset -1 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
 }
 
 /* 星の細かいパラメータ */
@@ -460,19 +460,20 @@ button.button_review{
 /* ウインドウ */
 .popup {
   background-color: #fff;
+  border: solid;
   border-radius: 25px;
-  border-color: #cccccc;
+  border-color: #000;
   box-shadow: 0 0 0 9999px rgba(255, 255, 255, 0.5);
   display: none;
   position: fixed;
-  border: solid;
-  top: 10%;
+  top: 18%;
   left: 0%;
   right: 0%;
-  bottom: 20%;
+  bottom: 12%;
   margin: auto;
   width: 800px;
   height: 900px;
+  font-size: 25pt;
 }
 
 /* チェックボックスの初期設定 */
@@ -498,14 +499,20 @@ button.button_review{
 /* 開く */
 .btn-open {
   display: block;
-  background-color: #01b6ed;
-  border-radius: 10px;
-  color: #333;
+  text-decoration: none;
+  background: #25a69b;
+  border-radius: 9px;
+  -webkit-tap-highlight-color: transparent;
+  color: #fff;
   padding: 10px;
+  font-size: 20pt;
   cursor: pointer;
-  margin: 10px auto;
-  width: 200px;
+  width: 49%;
+  height: 59px;
   text-align: center;
+  margin: auto;
+  border: solid 0px #000000;
+  box-shadow: inset -1 4px 0 rgba(255,255,255,0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
 }
 
 /* ポップアップの内容 */
@@ -513,6 +520,7 @@ button.button_review{
   margin: 40px auto 40px auto;
   width: 90%;
   font-size: 40px;
+  color: #000;
 }
 
 input#btn_send {
