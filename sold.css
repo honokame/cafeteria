@@ -2,7 +2,7 @@
 /* ウインドウ */
 .popup {
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: 45px;
   border-color: #cccccc;
   box-shadow: 0 0 0 9999px rgba(255, 255, 255, 0.5);
   display: none;
@@ -13,8 +13,8 @@
   right: 0%;
   bottom: 20%;
   margin: auto;
-  width: 800px;
-  height: 900px;
+  width: 650px;
+  height: 600px;
 }
 
 /* チェックボックスの初期設定 */
@@ -58,12 +58,12 @@
 }
 
 input#btn_send {
-  background-color: #1a1aff;
+  background-color: #66ff99;
   border-style: none;
   font-size: 30pt;
-  color: #fff;
-  width: 600px;
-  height: 80px;
+  color: #000;
+  width: 400px;
+  height: 60px;
 }
 
 textarea#review {
