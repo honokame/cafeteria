@@ -22,10 +22,10 @@
 
     .evaluation label {
       position: relative;
-      padding: 18px 18px 0;
+      padding: 20px 20px 0;
       color: gray;
       cursor: pointer;
-      font-size: 70px;
+      font-size: 80px;
     }
 
     .evaluation label .text {
