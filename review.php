@@ -14,7 +14,7 @@
   <div class="pop-box">
     <label for="popup-on">
       <div class="btn-open">
-        <span>レビューを書く</span>
+        <span>レビューを書く</span> <!--ボタン-->
     </label>
     <input type="checkbox" id="popup-on">
 
