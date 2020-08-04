@@ -2,19 +2,19 @@
 /* ウインドウ */
 .popup {
   background-color: #fff;
+   border: solid;
   border-radius: 45px;
-  border-color: #cccccc;
+  border-color: #66ff99;
   box-shadow: 0 0 0 9999px rgba(255, 255, 255, 0.5);
   display: none;
   position: fixed;
-  border: solid;
   top: 10%;
   left: 0%;
   right: 0%;
   bottom: 20%;
   margin: auto;
   width: 650px;
-  height: 600px;
+  height: 500px;
 }
 
 /* チェックボックスの初期設定 */
@@ -54,7 +54,12 @@
 .popup-content {
   margin: 40px auto 40px auto;
   width: 90%;
-  font-size: 40px;
+  font-size: 50px;
+}
+
+input#btn_select {
+  vertical-align: middle;
+  transform: scale(4.0);
 }
 
 input#btn_send {
@@ -70,4 +75,17 @@ textarea#review {
   width: 600px;
   height: 450px;
   font-size: 35px;
+}
+
+header.site-header{
+    background: #66f699;
+    height: 120px;
+    width: 651px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+  right: 0%;
+  bottom: 37%;
+  border-radius: 45px 45px 0px 0px;
+  margin: auto;
 }

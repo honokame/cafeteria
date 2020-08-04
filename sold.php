@@ -24,15 +24,16 @@
 
       <!-- ウィンドウの中身 -->
       <div class="popup-content">
+         <header class="site-header">
         <form>
           <p style="margin-bottom: 1em;">
-            売切れ情報投稿<br>
+            売切れ情報投稿<br><br>
             <u>カレーライス</u><br>
             <p style="margin-bottom: 1em;"> 
-              <input type="radio" name="button" value=false checked="checked">販売中
+              <input id="btn_select" type="radio" name="button" value=false checked="checked">販売中
               <br>
-              <input type="radio" name="button" value=true>売切れ
-              <br>
+              <input id="btn_select" type="radio" name="button" value=true>売切れ
+              <br><br>
               <input id="btn_send" type="submit" value="送信">
         </form>
 
@@ -42,7 +43,7 @@
         $conn = pg_connect("host=localhost dbname=team3db user=team3 password=1qazxsw23edc") or die("error1");
         $value = $_GET['button'];
         $sql = "update menu set sold=$value where menu='$selmenu'";
-        $res = pg_query($conn, $sql) or die("error2");
+        $res = pg_query($conn, $sql);
         $sql2 = "select sold from menu where menu='$selmenu'";
         $res2 = pg_query($conn, $sql2) or die("error3");
         $x = pg_fetch_array($res2, 0, PGSQL_ASSOC);
