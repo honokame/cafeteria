@@ -45,7 +45,7 @@
     <!--レビュー書き込みボタン-->
     <div class="pop-box">
     <label for="popup-on">
-      <button class="pop-open">
+      <div class="btn-open">
         <span>レビューを書く</span> <!--ボタン-->
     </label>
     <input type="checkbox" id="popup-on">
