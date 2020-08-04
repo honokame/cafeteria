@@ -34,7 +34,7 @@
               <br>
               <input id="btn_select" type="radio" name="button" value=true>売切れ
               <br><br>
-              <input id="btn_send" type="submit" value="送信">
+              <input id="btn_send" type="submit" value="投稿">
         </form>
 
         <?php
