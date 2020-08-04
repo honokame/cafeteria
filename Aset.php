@@ -77,7 +77,7 @@
           <p style="margin-bottom: 2em;">
 
           <textarea id= "review"name="comment" placeholder="コメントを入力してください"></textarea>
-          <input id="btn_send" type="submit" name="send" value="送信"/>
+          <input id="btn_send" type="submit" name="send" value="送信" formaction="TopPage.php"/>
       </div>
       </form>
     </div>
