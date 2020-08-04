@@ -6,8 +6,8 @@
 // echo $date["mon"];
 // echo $date["mday"];
 
-//$today = date('Y-m-d');
-$today = '2020-07-27';
+$today = date('Y-m-d');
+//$today = '2020-07-27';
 //echo "今日は".$today."\n";
 
 // データベース接続設定
