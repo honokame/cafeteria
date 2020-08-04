@@ -6,9 +6,9 @@
 // echo $date["mon"];
 // echo $date["mday"];
 
-$today = date('Y-m-d');
-// $today = '2020-07-27';
-echo "今日は".$today."\n";
+//$today = date('Y-m-d');
+$today = '2020-07-27';
+//echo "今日は".$today."\n";
 
 // データベース接続設定
 $sv = "localhost";
@@ -88,12 +88,12 @@ foreach($row as $week){
 }
 
 // 表示確認用
-//echo $dayA["menu"].$dayA["price"].$dayA["cal"];
+echo $dayA["menu"];
 //echo $dayB["menu"].$dayB["price"].$dayB["cal"];
 //echo $dayN[0]["menu"].$dayN[0]["price"];
 //echo $dayN[1]["menu"].$dayN[1]["price"];
 //for($j = 0;$j < 5;$j++){
-//  echo $weekB[$j]["menu"].$weekB[$j]["cal"];
+//  echo $weekB[$j]["menu"];
 //}
 // 接続を解除
 pg_close($dbconn);
