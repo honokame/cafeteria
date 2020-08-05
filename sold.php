@@ -24,7 +24,7 @@
     <!-- ウィンドウの中身 -->
     <div class="popup-content">
       <header class="site-header">
-          <form method="post">
+          <form method="post" action="TopPage.php">
             <p style="margin-bottom: 1em;">
               売切れ情報投稿<br><br>
               <u>カレーライス</u><br>
@@ -33,7 +33,7 @@
                 <br><br>
                 <input id="btn_select" type="radio" name="button" value=true>売切れ
                 <br><br>
-                <input id="btn_send" type="submit" value="投稿" onclick="location.href='172.16.16.7/team3/TopPage.php'">
+                <input id="btn_send" type="submit" value="投稿" name="send">
           </form>
            
 
@@ -55,8 +55,6 @@
           }
           $pg_close($conn);
           ?>
-
-
 </body>
 
 </html>
