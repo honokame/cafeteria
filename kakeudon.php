@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <!--ページ設定-->
   <meta name="viewport" devicewidth="width=640,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta name="viewport" content="user-scalable=no" />
   <title>明石高専学生食堂システム/かけうどん-詳細ページ</title>
   <link rel="stylesheet" href="style.css">
   <script language=”javascript”>
