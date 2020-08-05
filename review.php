@@ -43,7 +43,8 @@
             <label for="star5">★</label>
           </div>
           <p style="margin-bottom: 2em;">
-
+          
+          <input type="hidden" name="menu" value="うどん">
           <textarea id= "review"name="comment" placeholder="コメントを入力してください"></textarea>
           <input id="btn_send" type="submit" name="send" value="送信"/>
       </div>

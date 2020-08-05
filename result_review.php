@@ -13,7 +13,7 @@ $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") 
 // レビューが送信されたとき
 if (isset($_POST['send'])) {
   $today = date('Y-m-d');
-  $menu = 'たこ焼き';
+  $menu = $_POST['menu'];
   $star = $_POST['star'];
 
   // コメントのみのとき
