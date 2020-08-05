@@ -35,6 +35,7 @@
   padding: 0 40px;
   position: absolute;
   right: 0;
+  z-index: 2;
 }
 
 /* 開く */
@@ -83,11 +84,11 @@ header.site-header{
     background: #99cc99;
     height: 120px;
     width: 601px;
-    position: fixed;
     top: 0%;
     left: 0%;
     right: 0%;
     bottom: 40%;
     border-radius: 45px 45px 0px 0px;
     margin: auto;
+    position: fixed;
 }
