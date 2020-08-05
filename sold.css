@@ -1,6 +1,10 @@
 /* レビューポップアップ */
 /* ウインドウ */
-.popup {
+* {
+  box-sizing: border-box;
+}
+
+.popup-s {
   background-color: #fff;
    border: solid;
   border-radius: 45px;
@@ -18,17 +22,17 @@
 }
 
 /* チェックボックスの初期設定 */
-#popup-on {
+#popup-on-s {
   display: none;
 }
 
 /* チェックされたらポップアップウインドウを開く */
-#popup-on:checked + .popup {
+#popup-on-s:checked + .popup {
   display: block;
 }
 
 /* 閉じる */
-.icon-close {
+.icon-close-s {
   background: rgba(255, 255, 255, 0);
   color: #808080;
   font-size: 100px;
@@ -39,33 +43,29 @@
 }
 
 /* 開く */
-.btn-open {
-  display: block;
-  background-color: #01b6ed;
-  border-radius: 10px;
-  color: #333;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px auto;
-  width: 200px;
-  text-align: center;
+.btn-open-s {
+  background-color: #000;
+  position: absolute;
+  top: 1175px;
+  left: 37%;
 }
 
+
 /* ポップアップの内容 */
-.popup-content {
+.popup-content-s {
   margin: 40px auto 40px auto;
   width: 90%;
   font-size: 40px;
 }
 
-input#btn_select {
+input#btn_select-s {
   position: relative;
   top: -10px;
   margin-right: 35px;
   transform: scale(3.0);
 }
 
-input#btn_send {
+input#btn_send-s {
   background-color: #089b48;
   border-style: none;
   font-size: 30pt;
@@ -74,13 +74,7 @@ input#btn_send {
   height: 65px;
 }
 
-textarea#review {
-  width: 600px;
-  height: 450px;
-  font-size: 35px;
-}
-
-header.site-header{
+header.site-header-s{
     background: #99cc99;
     height: 120px;
     width: 601px;
