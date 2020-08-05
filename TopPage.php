@@ -98,7 +98,7 @@
           <form method="post" action="TopPage.php">
             <p style="margin-bottom: 1em;">
               売切れ情報投稿<br><br>
-              <u>カレーライス</u><br>
+              <u><?php echo $dayA["menu"]; ?></u><br>
               <p style="margin-bottom: 1em;">
                 <input id="btn-select-s" type="radio" name="button" value=false checked="checked">販売中
                 <br><br>
