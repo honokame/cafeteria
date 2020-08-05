@@ -104,7 +104,7 @@
                 <br><br>
                 <input id="btn-select-s" type="radio" name="button" value=true>売切れ
                 <br><br>
-                <input type="hidden" name="soldmenu" value="カレーライス">
+                <input type="hidden" name="soldmenu" value= <?php echo $dayA["menu"]; ?>>
                 <input id="btn-send-s" type="submit" value="投稿" name="send">
           </form>
       </div>
