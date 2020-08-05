@@ -21,9 +21,9 @@
     <!-- 閉じる -->
     <div class="popup">
       <label for="popup-on" class="icon-close">×</label>
-    <!-- ウィンドウの中身 -->
-    <div class="popup-content">
-      <header class="site-header">
+      <!-- ウィンドウの中身 -->
+      <div class="popup-content">
+        <header class="site-header">
           <form method="post" action="TopPage.php">
             <p style="margin-bottom: 1em;">
               売切れ情報投稿<br><br>
@@ -33,28 +33,9 @@
                 <br><br>
                 <input id="btn_select" type="radio" name="button" value=true>売切れ
                 <br><br>
+                <input type="hidden" name="soldmenu" value="カレーライス">
                 <input id="btn_send" type="submit" value="投稿" name="send">
           </form>
-           
-
-
-          <?php
-          $disp_enc = "UTF-8";
-          $selmenu = "カレーライス";
-          $conn = pg_connect("host=localhost dbname=team3db user=team3 password=1qazxsw23edc") or die("error1");
-          $value = $_POST['button'];
-          $sql = "update menu set sold=$value where menu='$selmenu'";
-          $res = pg_query($conn, $sql);
-          $sql2 = "select sold from menu where menu='$selmenu'";
-          $res2 = pg_query($conn, $sql2) or die("error3");
-          $x = pg_fetch_array($res2, 0, PGSQL_ASSOC);
-          if ($x["sold"] == 't') {
-            $cross = 'image/r_cross.jpeg';
-          } else {
-            $cross = 'image/g_cross.jpeg';
-          }
-          $pg_close($conn);
-          ?>
 </body>
 
 </html>

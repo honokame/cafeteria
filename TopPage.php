@@ -27,8 +27,8 @@
 
     <!--メニューレイアウト・ボタン設定-->
     <!--php-->
-   <?php include 'today.php';?>
    <?php include 'result_sold.php';?>
+   <?php include 'today.php';?>
    <?php include 'result_review.php';?>
     <!--当日メニュー配置-->
     <div class = "Aset">

@@ -25,7 +25,7 @@ if (isset($_POST['send'])) {
   $sql = "insert into review values('$menu',$star,'$comment','$today')";
   $res = pg_query($dbconn, $sql) or die("データ読み込みエラー");
 }
-  
+
 ?>
 
 
