@@ -88,7 +88,7 @@ foreach($row as $week){
 }
 
 // 表示確認用
-echo $dayA["menu"];
+//echo $dayA["menu"];
 //echo $dayB["menu"].$dayB["price"].$dayB["cal"];
 //echo $dayN[0]["menu"].$dayN[0]["price"];
 //echo $dayN[1]["menu"].$dayN[1]["price"];
