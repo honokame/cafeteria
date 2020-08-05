@@ -31,10 +31,10 @@
             <u>カレーライス</u><br>
             <p style="margin-bottom: 1em;"> 
               <input id="btn_select" type="radio" name="button" value=false checked="checked">販売中
-              <br>
+              <br><br>
               <input id="btn_select" type="radio" name="button" value=true>売切れ
               <br><br>
-              <input id="btn_send" type="submit" value="投稿">
+              <input id="btn_send" type="submit" value="投稿" formaction="TopPage.php">
         </form>
 
         <?php
