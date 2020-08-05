@@ -42,35 +42,35 @@
     <u><h3>メニュー</h3></u>
     <!--常設メニュー配置-->
     <div class = "left">
-      <button class="button_curry" type="submit" name="curry" onclick="location.href='./curry.html'"><img src="/team3/DesignImage/curry.png" alt="送信" /></button>
-      <p><b>カレー</b></p><br>
+      <button class="button_curry" type="submit" name="curry" onclick="location.href='./curry.php'"><img src="/team3/DesignImage/curry.png" alt="送信" /></button>
+      <p><b>カレーライス</b></p><br>
       <p>¥200</p>
 
-      <button class="button_miso-ramen" type="submit" name="miso-ramen" onclick="location.href='./miso-ramen.html'"><img src="/team3/DesignImage/miso-ramen.png" alt="送信" /></button>
+      <button class="button_miso-ramen" type="submit" name="miso-ramen" onclick="location.href='./miso-ramen.php'"><img src="/team3/DesignImage/miso-ramen.png" alt="送信" /></button>
       <p><b>味噌ラーメン</b></p><br>
       <p>¥200</p>
 
     </div>
     <div class = "center">
-      <button class="button_katsu-curry" type="submit" name="katsu-curry" onclick="location.href='./katsu-curry.html'"><img src="/team3/DesignImage/katsu-curry.png" alt="送信" /></button>
+      <button class="button_katsu-curry" type="submit" name="katsu-curry" onclick="location.href='./katsu-curry.php'"><img src="/team3/DesignImage/katsu-curry.png" alt="送信" /></button>
       <p><b>カツカレー</b></p><br>
       <p>¥200</p>
 
-      <button class="button_kakesoba" type="submit" name="kakesoba" onclick="location.href='./kakesoba.html'"><img src="/team3/DesignImage/kakesoba.png" alt="送信" /></button>
+      <button class="button_kakesoba" type="submit" name="kakesoba" onclick="location.href='./kakesoba.php'"><img src="/team3/DesignImage/kakesoba.png" alt="送信" /></button>
       <p><b>かけそば</b></p><br>
       <p>¥200</p>
     </div>
 
     <div class = "right">
-      <button class="button_curry-udon" type="submit" name="curry-udon" onclick="location.href='./curry-udon.html'"><img src="/team3/DesignImage/curry-udon.png" alt="送信" /></button>
+      <button class="button_curry-udon" type="submit" name="curry-udon" onclick="location.href='./curry-udon.php'"><img src="/team3/DesignImage/curry-udon.png" alt="送信" /></button>
       <p><b>カレーうどん</b></p><br>
       <p>¥200</p>
-      <button class="button_kakeudon" type="submit" name="kakeudon" onclick="location.href='./kakeudon.html'"><img src="/team3/DesignImage/kakeudon.png" alt="送信" /></button>
+      <button class="button_kakeudon" type="submit" name="kakeudon" onclick="location.href='./kakeudon.php'"><img src="/team3/DesignImage/kakeudon.png" alt="送信" /></button>
       <p><b>かけうどん</b></p><br>
       <p>¥200</p>
     </div>
 
-    <button class="button_rice" type="submit" name="rice" onclick="location.href='./rice.html'"><img src="/team3/DesignImage/rice.png" alt="送信" /></button>
+    <button class="button_rice" type="submit" name="rice" onclick="location.href='./rice.php'"><img src="/team3/DesignImage/rice.png" alt="送信" /></button>
     <p><b>ライス</b></p><br>
     <p>¥200</p>
 
