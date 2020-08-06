@@ -96,14 +96,14 @@
       <div class="popup-content-s">
         <header class="site-header-s">
           <form method="post" action="TopPage.php">
-            <p style="margin-bottom: 2em;">
-              売切れ情報投稿<br><br>
-              <u><?php echo $dayA["menu"]; ?></u><br>
-              <p style="margin-bottom: 1em;">
+            <p style="margin-bottom: 1em;">
+              <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
+              <u><?php echo $dayA["menu"]; ?></u>
+              <br><br>
                 <input id="btn-select-s" type="radio" name="button" value=false checked="checked">販売中
                 <br><br>
                 <input id="btn-select-s" type="radio" name="button" value=true>売切れ
-                <br><br>
+                <br>
                 <input type="hidden" name="soldmenu" value=<?php echo $dayA["menu"]; ?>>
                 <input id="btn-send-s" type="submit" value="投稿" name="send">
           </form>

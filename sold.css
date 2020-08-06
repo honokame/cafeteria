@@ -27,7 +27,7 @@
 }
 
 /* チェックされたらポップアップウインドウを開く */
-#popup-on-s:checked + .popup {
+#popup-on-s:checked + .popup-s {
   display: block;
 }
 
@@ -43,11 +43,16 @@
 }
 
 /* 開く */
-.btn-open-s {
-  background-color: #000;
-  position: absolute;
-  top: 1175px;
-  left: 37%;
+.btn-open-ss {
+  display: block;
+  background-color: #01b6ed;
+  border-radius: 10px;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 200px;
+  text-align: center;
 }
 
 
@@ -85,4 +90,12 @@ header.site-header-s{
     border-radius: 45px 45px 0px 0px;
     margin: auto;
     position: fixed;
+}
+
+/* 開く */
+.btn-open-s{
+  background: #000;
+  position: absolute;
+  top: 1175px;
+  left: 37%;
 }
