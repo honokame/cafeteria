@@ -82,37 +82,64 @@
   <p>¥200</p>
 
   <!--売り切れボタン配置-->
-  <div class="pop-box-s">
-    <label for="popup-on-s">
+  <div class="pop-box-s1">
+    <label for="popup-on-s1">
       <!--<button class="button_urikire" type="submit" style="position:absolute; top:1175px; left:37%" value="value" name="Aセット売り切れボタン"><img src="/team3/DesignImage/urikire.png" alt=""/></button></div></label>-->
-      <div class="btn-open-s"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s1"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
     </label>
-    <input type="checkbox" id="popup-on-s">
+    <input type="checkbox" id="popup-on-s1">
 
     <!-- 閉じる -->
-    <div class="popup-s">
-      <label for="popup-on-s" class="icon-close-s">×</label>
+    <div class="popup-s1">
+      <label for="popup-on-s1" class="icon-close-s1">×</label>
       <!-- ウィンドウの中身 -->
-      <div class="popup-content-s">
-        <header class="site-header-s">
+      <div class="popup-content-s1">
+        <header class="site-header-s1">
           <form method="post" action="TopPage.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayA["menu"]; ?></u>
               <br><br>
-                <input id="btn-select-s" type="radio" name="button" value=false checked="checked">販売中
+                <input id="btn-select-s1" type="radio" name="button" value=false checked="checked">販売中
                 <br><br>
-                <input id="btn-select-s" type="radio" name="button" value=true>売切れ
+                <input id="btn-select-s1" type="radio" name="button" value=true>売切れ
                 <br>
                 <input type="hidden" name="soldmenu" value=<?php echo $dayA["menu"]; ?>>
-                <input id="btn-send-s" type="submit" value="投稿" name="send">
+                <input id="btn-send-s1" type="submit" value="投稿" name="send">
           </form>
       </div>
     </div>
   </div>
 
+<div class="pop-box-s2">
+    <label for="popup-on-s2">
+  <!-- <button class="button_urikire" type="submit" style="position:absolute; top:1175px; left:97%" value="value" name="Bセット売り切れボタン"><img src="/team3/DesignImage/urikire.png" alt="送信" /></button> -->
+ <div class="btn-open-s2"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+    </label>
+    <input type="checkbox" id="popup-on-s2">
 
-  <button class="button_urikire" type="submit" style="position:absolute; top:1175px; left:97%" value="value" name="Bセット売り切れボタン"><img src="/team3/DesignImage/urikire.png" alt="送信" /></button>
+    <!-- 閉じる -->
+    <div class="popup-s2">
+      <label for="popup-on-s2" class="icon-close-s2">×</label>
+      <!-- ウィンドウの中身 -->
+      <div class="popup-content-s2">
+        <header class="site-header-s2">
+          <form method="post" action="TopPage.php">
+            <p style="margin-bottom: 1em;">
+              <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
+	      <u><?php echo $dayB["menu"]; ?></u>
+<br><br>
+		<input id="btn-select-s2" type="radio" name="button" value=false checked="checked">販売中
+		<br><br>
+		<input id="btn-select-s2" type="radio" name="button" value=true>売切れ
+		<br>
+		<input type="hidden" name="soldmenu" value=<?php echo $dayB["menu"]; ?>>
+		<input id="btn-send-s2" type="submit" value="投稿" name="send">
+	  </form>
+      </div>
+    </div>
+  </div>
+
   <button class="button_urikire" type="submit" style="position:absolute; top:1700px; left:22%" value="value" name="カレー売り切れボタン"><img src="/team3/DesignImage/urikire.png" alt="送信" /></button>
   <button class="button_urikire" type="submit" style="position:absolute; top:1700px; left:55%" value="value" name="カツカレー売り切れボタン"><img src="/team3/DesignImage/urikire.png" alt="送信" /></button>
   <button class="button_urikire" type="submit" style="position:absolute; top:1700px; left:87%" value="value" name="カレーうどん売り切れボタン"><img src="/team3/DesignImage/urikire.png" alt="送信" /></button>
@@ -131,17 +158,17 @@
     <!--DAY1-->
     <div style="width:100%;margin-top:30px;">
       <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px 5px;padding:15px;text-align:center;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/0a/9b/p/o0300030013113018867.png);border-radius:10px;">
-        <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
-          <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY1</b><br><?php echo $weekA[0]["menu"]; ?><br><?php echo $weekB[0]["menu"]; ?></div>
-        </div>
+	<div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
+	  <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY1</b><br><?php echo $weekA[0]["menu"]; ?><br><?php echo $weekB[0]["menu"]; ?></div>
+	</div>
       </div>
     </div>
     <!--DAY4-->
     <div style="width:100%;margin-top:30px;">
       <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/0a/9b/p/o0300030013113018867.png);border-radius:10px;">
-        <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
-          <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY4</b><br><?php echo $weekA[3]["menu"]; ?><br><?php echo $weekB[3]["menu"]; ?></div>
-        </div>
+	<div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
+	  <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY4</b><br><?php echo $weekA[3]["menu"]; ?><br><?php echo $weekB[3]["menu"]; ?></div>
+	</div>
       </div>
     </div>
   </div>
@@ -150,17 +177,17 @@
     <!--DAY2-->
     <div style="width:100%;margin-top:30px;">
       <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/0a/9b/p/o0300030013113018867.png);border-radius:10px;">
-        <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
-          <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY2</b><br><?php echo $weekA[1]["menu"]; ?><br><?php echo $weekB[1]["menu"]; ?></div>
-        </div>
+	<div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
+	  <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY2</b><br><?php echo $weekA[1]["menu"]; ?><br><?php echo $weekB[1]["menu"]; ?></div>
+	</div>
       </div>
     </div>
     <!--DAY5-->
     <div style="width:100%;margin-top:30px;">
       <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/0a/9b/p/o0300030013113018867.png);border-radius:10px;">
-        <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
-          <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY5</b><br><?php echo $weekA[4]["menu"]; ?><br><?php echo $weekB[4]["menu"]; ?></div>
-        </div>
+	<div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
+	  <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY5</b><br><?php echo $weekA[4]["menu"]; ?><br><?php echo $weekB[4]["menu"]; ?></div>
+	</div>
       </div>
     </div>
   </div>
@@ -169,9 +196,9 @@
     <!--DAY3-->
     <div style="width:100%;margin-top:30px;">
       <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/0a/9b/p/o0300030013113018867.png);border-radius:10px;">
-        <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
-          <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY3</b><br><?php echo $weekA[2]["menu"]; ?><br><?php echo $weekB[2]["menu"]; ?></div>
-        </div>
+	<div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
+	  <div style="border:2px dashed #e6e3e0;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY3</b><br><?php echo $weekA[2]["menu"]; ?><br><?php echo $weekB[2]["menu"]; ?></div>
+	</div>
       </div>
     </div>
   </div>
