@@ -4,7 +4,7 @@
   background-color: #fff;
   border: solid;
   border-radius: 45px;
-  border-color: #99cc99;
+  border-color: #ffff99;
   box-shadow: 0 0 0 9999px rgba(255, 255, 255, 0.5);
   display: none;
   position: fixed;
@@ -56,7 +56,7 @@ input#btn-select-c {
 }
 
 input#btn-send-c {
-  background-color: #089b48;
+  background-color: #8c9b08;
   border-style: none;
   font-size: 30pt;
   width: 200px;
@@ -68,7 +68,7 @@ input#btn-send-c {
 }
 
 header.site-header-c{
-    background: #99cc99;
+    background: #ffff99;
     height: 120px;
     width: 601px;
     top: 0%;
@@ -174,7 +174,7 @@ header.site-header-s1{
 
 /* 開く */
 .btn-open-s1{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 1175px;
   left: 37%;
@@ -264,7 +264,7 @@ header.site-header-s2{
 }
 
 .btn-open-s2{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 1175px;
   left: 97%;
@@ -354,7 +354,7 @@ header.site-header-s3{
 }
 
 .btn-open-s3{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 1700px;
   left: 22%;
@@ -444,7 +444,7 @@ header.site-header-s4{
 }
 
 .btn-open-s4{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 1700px;
   left: 55%;
@@ -534,7 +534,7 @@ header.site-header-s5{
 }
 
 .btn-open-s5{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 1700px;
   left: 87%;
@@ -624,7 +624,7 @@ header.site-header-s6{
 }
 
 .btn-open-s6{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 2200px;
   left: 22%;
@@ -714,7 +714,7 @@ header.site-header-s7{
 }
 
 .btn-open-s7{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 2200px;
   left: 55%;
@@ -804,7 +804,7 @@ header.site-header-s8{
 }
 
 .btn-open-s8{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 2200px;
   left: 87%;
@@ -894,7 +894,7 @@ header.site-header-s9{
 }
 
 .btn-open-s9{
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 2625px;
   left: 75%;
