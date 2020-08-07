@@ -36,7 +36,7 @@ function conv_dbdata($string,$enc){
 $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
 
 // データを取り出す
-$sql = "SELECT * FROM menu";
+$sql = "SELECT * FROM menu ORDER BY PRICE DESC";
 $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 
 // A,Bセット読み込み 
@@ -52,7 +52,8 @@ for($i = 0;$i < pg_numrows($res);$i++){
   }
 
   // Bセット
-  else if($row["date"] == $today && $row["type"] == 1){
+  // else if($row["date"] == $today && $row["type"] == 1){ 
+  if($row["date"] == $today && $row["type"] == 1){
     $dayB["menu"] = $row["menu"];
     $dayB["price"] = $row["price"];
     $dayB["cal"] = $row["cal"];
@@ -81,7 +82,9 @@ foreach($row as $week){
   if(strtotime($today) < strtotime($week["date"])){ 
     if($week["type"] == 0){
       array_push($weekA,$week);
-    }else if($week["type"] == 1){
+    }
+   // else if($week["type"] == 1){
+   if($week["type"] == 1){
       array_push($weekB,$week);
     }
   }
@@ -96,6 +99,6 @@ foreach($row as $week){
 //  echo $weekB[$j]["menu"];
 //}
 // 接続を解除
-pg_close($dbconn);
+//pg_close($dbconn);
 
 ?>
