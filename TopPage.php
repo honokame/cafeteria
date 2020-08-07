@@ -22,6 +22,7 @@
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.jpeg"></button>
     <!--<button class="konzatsu" name="konzatsu"><img src="/team3/DesignImage/level3.jpeg"></button>-->
     
+    <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
     <label for="popup-on-c">
       < <!--<button class="konzatsu" name="konzatsu"><img src="/team3/DesignImage/level3.jpeg"></button-->
@@ -64,6 +65,8 @@
   <?php include 'result_sold.php'; ?>
   <?php include 'today.php'; ?>
   <?php include 'result_review.php'; ?>
+  <?php include 'result_congestion.php'; ?>
+
   <!--当日メニュー配置-->
   <div class="Aset">
     <button class="button_A" type="submit" name="A" onclick="location.href='./Aset.php'"><img src="/team3/DesignImage/Aset.png" alt="送信" />Aset</button>
