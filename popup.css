@@ -4,7 +4,7 @@
   background-color: #fff;
   border: solid;
   border-radius: 45px;
-  border-color: #ffff99;
+  border-color: #fafa67;
   box-shadow: 0 0 0 9999px rgba(255, 255, 255, 0.5);
   display: none;
   position: fixed;
@@ -53,10 +53,11 @@ input#btn-select-c {
   top: -10px;
   margin-right: 35px;
   transform: scale(3.0);
+  vertical-align: middle;
 }
 
 input#btn-send-c {
-  background-color: #8c9b08;
+  background-color: #ffff00;
   border-style: none;
   font-size: 30pt;
   width: 200px;
@@ -68,7 +69,7 @@ input#btn-send-c {
 }
 
 header.site-header-c{
-    background: #ffff99;
+    background: #fafa67;
     height: 120px;
     width: 601px;
     top: 0%;

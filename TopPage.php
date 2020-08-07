@@ -21,35 +21,35 @@
   <header class="site-header">
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.jpeg"></button>
     <!--<button class="konzatsu" name="konzatsu"><img src="/team3/DesignImage/level3.jpeg"></button>-->
-    
+
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
-    <label for="popup-on-c">
-      < <!--<button class="konzatsu" name="konzatsu"><img src="/team3/DesignImage/level3.jpeg"></button-->
-      <div class="btn-open-c"><img src="/team3/DesignImage/level3.jpeg"></div>
-    </label>
-    <input type="checkbox" id="popup-on-c">
+      <label for="popup-on-c">
+        < <!--<button class="konzatsu" name="konzatsu"><img src="/team3/DesignImage/level3.jpeg"></button-->
+          <div class="btn-open-c"><img src="/team3/DesignImage/level3.jpeg"></div>
+      </label>
+      <input type="checkbox" id="popup-on-c">
 
-    <!-- 閉じる -->
-    <div class="popup-c">
-      <label for="popup-on-c" class="icon-close-c">×</label>
-      <!-- ウィンドウの中身 -->
-      <div class="popup-content-c">
-        <header class="site-header-c">
-          <form method="post" action="TopPage.php">
-            <p style="margin-bottom: 1em;">
-              <div style="padding-bottom: 30px;"> 混雑情報投稿</div>
-              <input id="btn-select-c" type="radio" name="button" value=0>ガラガラ
-              <br><br>
-              <input id="btn-select-c" type="radio" name="button" value=1 checked="checked">普通
-              <br><br>
-              <input id="btn-select-c" type="radio" name="button" value=2>混雑
-              <br>
-              <input id="btn-send-c" type="submit" value="投稿" name="send">
-          </form>
+      <!-- 閉じる -->
+      <div class="popup-c">
+        <label for="popup-on-c" class="icon-close-c">×</label>
+        <!-- ウィンドウの中身 -->
+        <div class="popup-content-c">
+          <header class="site-header-c">
+            <form method="post" action="TopPage.php">
+              <p style="margin-bottom: 1em;">
+                <div style="padding-bottom: 30px;"> 混雑情報投稿</div>
+                <input id="btn-select-c" type="radio" name="button" value=0>ガラガラ
+                <br><br>
+                <input id="btn-select-c" type="radio" name="button" value=1 checked="checked">普通
+                <br><br>
+                <input id="btn-select-c" type="radio" name="button" value=2>混雑
+                <br>
+                <input id="btn-send-c" type="submit" value="投稿" name="send">
+            </form>
+        </div>
       </div>
     </div>
-  </div>
   </header>
 
   <!--ページトップ設定 -->
@@ -113,7 +113,7 @@
   <p><b>ライス</b></p><br>
   <p>¥200</p>
 
- 
+
 
 
   <!--売り切れボタン配置、ポップアップ-->
