@@ -16,16 +16,16 @@
 </head>
 
 <body>
-
   <!--ヘッダー設定-->
   <header class="site-header">
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
     <!-- <button class="konzatsu" name="konzatsu"><img src="/team3/DesignImage/level3.png"></button>-->
+<?php include 'congestion_out.php';?>
 
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
       <label for="popup-on-c">
-        <div class="btn-open-c"><img src="/team3/DesignImage/level3.png"></div>
+        <div class="btn-open-c"><img src="/team3/DesignImage/<?php echo $status;?>"></div>
       </label>
       <input type="checkbox" id="popup-on-c">
 
@@ -45,7 +45,7 @@
                 <br><br>
                 <input id="btn-select-c" type="radio" name="button" value=2>混雑
                 <br>
-                <input id="btn-send-c" type="submit" value="投稿" name="send">
+                <input id="btn-send-c" type="submit" value="投稿" name="send1">
             </form>
         </div>
       </div>
@@ -53,7 +53,7 @@
   </header>
 
   <!--ページトップ設定 -->
-  <div class="hero"><img src="/team3/DesignImage/hero.png" alt="hero"></div>
+  <div class="hero"><img src="/team3/DesignImage/hero.jpeg" alt="hero"></div>
 
   <u>
     <h2>Today's Menu</h2>
@@ -63,7 +63,8 @@
   <!--メニューレイアウト・ボタン設定-->
   <!--php-->
   <?php include 'today.php'; ?>
-
+  <?php include 'result_sold.php';?>
+  <?php include 'result_congestion.php';?>
 
   <!--当日メニュー配置-->
   <div class="Aset">

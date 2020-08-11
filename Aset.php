@@ -22,7 +22,7 @@
 
     <!--php-->
    <?php include 'today.php';?>
-   <?php include 'review.php';?>
+   <?php include 'review_out.php';?>
 
 
     <!--menuImage-->
@@ -36,25 +36,23 @@
 
     <!--レビュー吹き出し-->
     <div class="box25">
-      <p><?php echo $reviewA["eval"];?><?php echo $reviewA["body"];?></p>
+      <p><?php echo $starA;?><?php echo $reviewA;?></p>
     </div>
     <div class="box25">
-      <p><?php echo $reviewA["eval"];?><?php echo $reviewA["body"];?></p>
+      <p><?php echo $starA;?><?php echo $reviewA;?></p>
     </div>
     <div class="box25">
-      <p><?php echo $reviewA["eval"];?><?php echo $reviewA["body"];?></p>
+      <p><?php echo $starA;?><?php echo $reviewA;?></p>
     </div>
     <div class="box25">
-      <p><?php echo $reviewA["eval"];?><?php echo $reviewA["body"];?></p>
+      <p><?php echo $starA;?><?php echo $reviewA;?></p>
     </div>
     <div class="box25">
-      <p><?php echo $reviewA["eval"];?><?php echo $reviewA["body"];?></p>
+      <p><?php echo $starA;?><?php echo $reviewA;?></p>
     </div>
     <div class="box25">
-      <p><?php echo $reviewA["eval"];?><?php echo $reviewA["body"];?></p>
+      <p><?php echo $starA;?><?php echo $reviewA;?></p>
     </div>
-
-
 
     <!--レビュー書き込みボタン-->
     <div class="pop-box">
@@ -70,9 +68,9 @@
 
       <!-- ウィンドウの中身 -->
       <div class="popup-content">
-        <form action="review.php" method="POST">
+        <form action="TopPage.php" method="post">
           <p style="margin-bottom: 1em;">
-          <p align= "left"><u>たこ焼き</u></p>
+          <p align= "left"><u>カレーライス</u></p>
           <p style = "margin-bottom:1em;">
 
           <!-- 星の表示 -->
@@ -89,43 +87,14 @@
             <label for="star5">★</label>
           </div>
           <p style="margin-bottom: 2em;">
-
+          
+          <input type="hidden" name="menu" value="カレーライス">
           <textarea id= "review"name="comment" placeholder="コメントを入力してください"></textarea>
-          <input id="btn_send" type="submit" name="send" value="送信" formaction="TopPage.php"/>
+          <input id="btn_send" type="submit" name="send" value="送信"> 
       </div>
       </form>
     </div>
   </div>
-
-  <?php
-  $display_enc = "UTF-8";
-
-  // データベース接続設定
-  $sv = "localhost";
-  $name = "team3db";
-  $user = "team3";
-  $pass = "1qazxsw23edc";
-
-  // データベースに接続
-  $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
-
-  // レビューが送信されたとき
-  if (isset($_POST['send'])) {
-    $today = date('Y-m-d');
-    $menu = 'たこ焼き';
-    $star = $_POST['star'];
-
-    // コメントのみのとき
-    if ($star == null) {
-      $star = 0;
-    }
-
-    $comment = $_POST["comment"];
-    $sql = "insert into review values('$menu',$star,'$comment','$today')";
-    $res = pg_query($dbconn, $sql) or die("データ読み込みエラー");
-  }
-
-  ?>
 
     <!--フッター設定-->
     <footer class="site-footer">
