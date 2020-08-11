@@ -6,8 +6,6 @@
   if(isset($_POST['send'])){
   $value = $_POST['button'];
   $selmenu = $_POST['soldmenu'];
-  }
-
   $sql = "update menu set sold=$value where menu='$selmenu'";
   $res = pg_query($conn, $sql);
   $sql2 = "select sold from menu where menu='$selmenu'";
@@ -19,5 +17,6 @@
   } else {
     $cross = 'image/g_cross.jpeg';
   }
+}
 
-?>
+  ?>

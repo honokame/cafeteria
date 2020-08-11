@@ -23,6 +23,10 @@
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
     <!--<button class="konzatsu" name="konzatsu"><img src="/team3/DesignImage/level3.png"></button>-->
     <?php require_once 'congestion_out.php'; ?>
+    <?php require_once 'today.php'; ?>
+    <?php require_once 'review_out.php'; ?>
+    <?php require_once 'result_congestion.php'; ?>
+    <?php require_once 'result_sold.php'; ?>
 
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
@@ -64,18 +68,17 @@
 
   <!--メニューレイアウト・ボタン設定-->
   <!--php-->
-  <?php require_once 'today.php'; ?>
-  <?php require_once 'review_out.php'; ?>
   <!--当日メニュー配置-->
   <link rel="stylesheet" href="popup.css">
   <div class="Aset">
     <button class="button_A" type="submit" name="A" onclick="location.href='./Aset.php'"><img src="/team3/DesignImage/Aset.png" alt="送信" />Aset</button>
     <p><b><?php echo $dayA["menu"]; ?></b></p><br>
-    <p>¥<?php echo $dayA["price"]; ?>  <div class="star-rating">
-      <div class="star-rating-front" style="width: <?= $starA * 20 ?>%">★★★★★</div>
-      <div class="star-rating-back">★★★★★</div>
-    </div><p>
-  
+    <p>¥<?php echo $dayA["price"]; ?> <div class="star-rating">
+        <div class="star-rating-front" style="width: <?= $starA * 20 ?>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★</div>
+      </div>
+      <p>
+
   </div>
   <div class="Bset">
     <button class="button_B" type="submit" name="B" onclick="location.href='./Bset.html'"><img src="/team3/DesignImage/Bset.png" alt="送信" /></button>
@@ -89,7 +92,7 @@
   </u>
   <!--常設メニュー配置-->
   <div class="left">
-    <button class="button_curry" type="submit" name="curry" onclick="location.href='./curry.html'"><img src="/team3/DesignImage/curry.png" alt="送信" /></button>
+    <button class="button_curry" type="submit" name="curry" onclick="location.href='./curry.php'"><img src="/team3/DesignImage/curry.png" alt="送信" /></button>
     <p><b><?php echo $dayN[0]["menu"]; ?></b></p><br>
     <p>¥<?php echo $dayN[0]["price"]; ?></p>
 
@@ -99,7 +102,7 @@
 
   </div>
   <div class="center">
-    <button class="button_katsu-curry" type="submit" name="katsu-curry" onclick="location.href='./katsu-curry.html'"><img src="/team3/DesignImage/katsu-curry.png" alt="送信" /></button>
+    <button class="button_katsu-curry" type="submit" name="katsu-curry" onclick="location.href='./katsu-curry.php'"><img src="/team3/DesignImage/katsu-curry.png" alt="送信" /></button>
     <p><b><?php echo $dayN[1]["menu"]; ?></b></p><br>
     <p>¥<?php echo $dayN[1]["price"]; ?></p>
 
@@ -408,16 +411,6 @@
       </div>
     </div>
   </div>
-  <!--DAY4-->
-  <div style="width:100%;margin-top:30px;">
-    <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
-      <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
-        <div style="border:2px dashed #545454;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY4</b><br><?php echo $weekA[3]["menu"]; ?><br><?php echo $weekB[3]["menu"]; ?></div>
-      </div>
-    </div>
-  </div>
-  </div>
-
 
   <!--DAY2-->
   <div style="width:100%;margin-top:30px;">
@@ -427,17 +420,7 @@
       </div>
     </div>
   </div>
-  <!--DAY5-->
-  <div style="width:100%;margin-top:30px;">
-    <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
-      <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
-        <div style="border:2px dashed #545454;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY5</b><br><?php echo $weekA[4]["menu"]; ?><br><?php echo $weekB[4]["menu"]; ?></div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
+  
   <!--DAY3-->
   <div style="width:100%;margin-top:30px;">
     <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
@@ -447,10 +430,26 @@
     </div>
   </div>
   </div>
-
-
-
-
+  
+  <!--DAY4-->
+  <div style="width:100%;margin-top:30px;">
+    <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
+      <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
+        <div style="border:2px dashed #545454;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY4</b><br><?php echo $weekA[3]["menu"]; ?><br><?php echo $weekB[3]["menu"]; ?></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <!--DAY5-->
+  <div style="width:100%;margin-top:30px;">
+    <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
+      <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
+        <div style="border:2px dashed #545454;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b>DAY5</b><br><?php echo $weekA[4]["menu"]; ?><br><?php echo $weekB[4]["menu"]; ?></div>
+      </div>
+    </div>
+  </div>
+  </div>
 
 
 

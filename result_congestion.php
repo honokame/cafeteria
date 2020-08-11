@@ -6,8 +6,8 @@ $conn = pg_connect("host=localhost dbname=team3db user=team3 password=1qazxsw23e
 if(isset($_POST['send1'])){
 $value = $_POST['button'];
 $time = date('Y-m-d H:i:s');
-}
-
 $sql = "insert into congestion values($value,'$time')";
 $res = pg_query($conn,$sql);
+}
+
 ?>
