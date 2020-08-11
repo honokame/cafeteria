@@ -21,8 +21,8 @@
     <!--サブページ設定-->
 
     <!--php-->
-   <?php include 'today.php';?>
-   <?php include 'review_out.php';?>
+   <?php require_once 'today.php';?>
+   <?php require_once 'review_out.php';?>
 
 
     <!--menuImage-->
