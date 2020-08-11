@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <!--ページ設定-->
   <meta name="viewport" devicewidth="width=640,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
-  <meta name="viewport" content="user-scalable=no" />
-  <title>明石高専学生食堂システム/カレー-詳細ページ</title>
+  <title>明石高専学生食堂システム/カレーライス-詳細ページ</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="star.css">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+
   <script language=”javascript”>
     resizeTo(640, 1136);
   </script>
@@ -16,32 +19,135 @@
 <body>
   <!--ヘッダー設定-->
   <header class="site-header">
-    <button class="logo" name="logo" onclick="location.href='./TopPage.html'"><img src="DesignImage/logo.jpeg"></button>
-    <button class="konzatsu"><img src="DesignImage/混雑3.jpeg" name="konzatsu"></button>
+    <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
+    <!--<button class="konzatsu"><img src="/team3/DesignImage/level3.png" name="konzatsu"></button>-->
+    <?php require_once 'congestion_out.php'; ?>
+
+    <!-- 混雑情報ポップアップ -->
+    <div class="pop-box-c">
+
+      <label for="popup-on-c">
+        <div class="btn-open-c"><img src="/team3/DesignImage/<?php echo $status; ?>"></div>
+      </label>
+      <input type="checkbox" id="popup-on-c">
+
+      <!-- 閉じる -->
+      <div class="popup-c">
+        <label for="popup-on-c" class="icon-close-c">×</label>
+        <!-- ウィンドウの中身 -->
+        <div class="popup-content-c">
+          <header class="site-header-c">
+            <form method="post" action="TopPage.php">
+              <p style="margin-bottom: 1em;">
+                <div style="padding-bottom: 30px;"> 混雑情報投稿</div>
+                <br>
+                <input id="btn-select-c" type="radio" name="button" value=0>ガラガラ
+                <br><br>
+                <input id="btn-select-c" type="radio" name="button" value=1 checked="checked">普通
+                <br><br>
+                <input id="btn-select-c" type="radio" name="button" value=2>混雑
+                <br>
+                <input id="btn-send-c" type="submit" value="投稿" name="send1">
+            </form>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!--サブページ設定-->
+
+  <!--php-->
+  <?php require_once 'today.php'; ?>
+  <?php require_once 'review_out.php'; ?>
+
   <!--menuImage-->
-  <div class="MenuImage" style="text-align:center"><img src="イメージ/カレー.png" alt="menu"></div>
+  <div class="MenuImage" style="text-align:center"><img src="/team3/DesignImage/curry.png" alt="menu"></div>
+
+  <!--メニュー名-->
+  <h5><?php echo $dayN[0]["menu"]; ?></h5>
+  <br>
+  <!--価格・カロリー情報-->
+  <h6>¥<?php echo $dayN[0]["price"]; ?>&nbsp;&nbsp;&nbsp;カロリー：<?php echo $dayN[0]["cal"]; ?>kcal</h6>
+
+  <!--総合評価-->
+  <h6>
+    <div class="star-rating">
+      <div class="star-rating-front" style="width: <?= $starA * 20 ?>%">★★★★★</div>
+      <div class="star-rating-back">★★★★★</div>
+  </h6>
 
   <!--レビュー吹き出し-->
+  <!--var_dump($reviewA);-->
   <div class="box25">
-    <p>ここに文章</p>
+    <nobr>
+      <div class="star-rating">
+        <div class="star-rating-front" style="width: <?= $reviewA[0]["eval"] * 20 ?>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★
+          &nbsp;<?php echo $reviewA[0]["body"]; ?>
+    </nobr>
   </div>
-  <div class="box25">
-    <p>ここに文章</p>
   </div>
-  <div class="box25">
-    <p>ここに文章</p>
   </div>
-  <div class="box25">
-    <p>ここに文章</p>
+
+  <div class="box26">
+    <nobr>
+      <div class="star-rating">
+        <div class="star-rating-front" style="width: <?= $reviewA[1]["eval"] * 20 ?>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★
+          &nbsp;
+          <?php echo $reviewA[1]["body"]; ?></div>
+    </nobr>
   </div>
-  <div class="box25">
-    <p>ここに文章</p>
   </div>
-  <div class="box25">
-    <p>ここに文章</p>
+  </div>
+
+  <div class="box27">
+    <nobr>
+      <div class="star-rating">
+        <div class="star-rating-front" style="width: <?= $reviewA[2]["eval"] * 20 ?>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★
+          &nbsp;
+          <?php echo $reviewA[2]["body"]; ?></div>
+    </nobr>
+  </div>
+  </div>
+  </div>
+
+  <div class="box28">
+    <nobr>
+      <div class="star-rating">
+        <div class="star-rating-front" style="width: <?= $reviewA[3]["eval"] * 20 ?>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★
+          &nbsp;
+          <?php echo $reviewA[3]["body"]; ?></div>
+    </nobr>
+  </div>
+  </div>
+  </div>
+
+  <div class="box29">
+    <nobr>
+      <div class="star-rating">
+        <div class="star-rating-front" style="width: <?= $reviewA[4]["eval"] * 20 ?>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★
+          &nbsp;
+          <?php echo $reviewA[4]["body"]; ?></div>
+    </nobr>
+  </div>
+  </div>
+  </div>
+
+  <div class="box30">
+    <nobr>
+      <div class="star-rating">
+        <div class="star-rating-front" style="width: <?= $reviewA[5]["eval"] * 20 ?>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★
+        &nbsp;
+        <?php echo $reviewA[5]["body"]; ?>
+      </div>
+    </nobr>
+  </div>
+  </div>
   </div>
 
   <!--レビュー書き込みボタン-->
@@ -92,5 +198,3 @@
     <p class="copyright">@2020 e16_team3</p>
   </footer>
 </body>
-
-</html>
