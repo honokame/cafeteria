@@ -5,7 +5,7 @@
 $disp_enc="UTF-8";
 $time = date('Y-m-d H:i:s');
 $conn = pg_connect("host=localhost dbname=team3db user=team3 password=1qazxsw23edc") or die("error1");
-$sql = "select * from congestion where '$time'-time < interval '10minutes'";
+$sql = "select * from congestion where '$time'-time < interval '5minutes'";
 $x = array();
 $res = pg_query($conn,$sql) or die("error3");
 for($i=0;$i<pg_numrows($res);$i++){
@@ -19,7 +19,10 @@ for($i=0;$i<count($x);$i++){
     $ave += $x[$i]["input"];
     //echo $x[$i]["input"];
 }
+if(count($x)!=0){
 $ave /= count($x);
+}
+
 
 //判定
 if($ave<0.5){
@@ -33,8 +36,6 @@ if($ave<0.5){
     $status="level3.png";
 }
 
-//echo $status;
-//echo $ave;
 
 ?>
 </body>

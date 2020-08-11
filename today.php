@@ -36,7 +36,7 @@ function conv_dbdata($string,$enc){
 $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
 
 // データを取り出す
-$sql = "SELECT * FROM menu ORDER BY PRICE DESC";
+$sql = "SELECT * FROM menu ORDER BY date";
 $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 
 // A,Bセット読み込み 
@@ -95,8 +95,8 @@ foreach($row as $week){
 //echo $dayB["menu"].$dayB["price"].$dayB["cal"];
 //echo $dayN[0]["menu"].$dayN[0]["price"];
 //echo $dayN[1]["menu"].$dayN[1]["price"];
-//for($j = 0;$j < 5;$j++){
-//  echo $weekB[$j]["menu"];
+//for($j = 0;$j < 10;$j++){
+//  echo $dayN[$j]["menu"];
 //}
 // 接続を解除
 //pg_close($dbconn);
