@@ -128,7 +128,7 @@
   <div class="pop-box-s1">
     <label for="popup-on-s1">
       <!--<button class="button_urikire" type="submit" style="position:absolute; top:1175px; left:37%" value="value" name="Aセット売り切れボタン"><img src="/team3/DesignImage/urikire.png" alt=""/></button></div></label>-->
-      <div class="btn-open-s1"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s1"><img src="/team3/<?php echo $cross1; ?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s1">
 
@@ -148,7 +148,7 @@
               <input id="btn-select-s1" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayA["menu"]; ?>>
-              <input id="btn-send-s1" type="submit" value="投稿" name="send">
+              <input id="btn-send-s1" type="submit" value="投稿" name="send_1">
           </form>
       </div>
     </div>
@@ -157,7 +157,7 @@
   <div class="pop-box-s2">
     <label for="popup-on-s2">
       <!-- <button class="button_urikire" type="submit" style="position:absolute; top:1175px; left:97%" value="value" name="Bセット売り切れボタン"><img src="/team3/DesignImage/urikire.png" alt="送信" /></button> -->
-      <div class="btn-open-s2"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s2"><img src="/team3/<?php echo $cross2; ?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s2">
 
@@ -177,7 +177,7 @@
               <input id="btn-select-s2" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayB["menu"]; ?>>
-              <input id="btn-send-s2" type="submit" value="投稿" name="send">
+              <input id="btn-send-s2" type="submit" value="投稿" name="send_2">
           </form>
       </div>
     </div>
@@ -420,7 +420,7 @@
       </div>
     </div>
   </div>
-  
+
   <!--DAY3-->
   <div style="width:100%;margin-top:30px;">
     <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
@@ -430,7 +430,7 @@
     </div>
   </div>
   </div>
-  
+
   <!--DAY4-->
   <div style="width:100%;margin-top:30px;">
     <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
@@ -440,7 +440,7 @@
     </div>
   </div>
   </div>
-  
+
   <!--DAY5-->
   <div style="width:100%;margin-top:30px;">
     <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
