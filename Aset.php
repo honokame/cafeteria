@@ -21,37 +21,53 @@
     <!--サブページ設定-->
 
     <!--php-->
-   <?php require_once 'today.php';?>
-   <?php require_once 'review_out.php';?>
+      
 
+<!-- <div class="star-rating">
+       <div class="star-rating-front" style="width: 60%">★★★★★</div>
+       <div class="star-rating-back">★★★★★</div>
+   </div>
+-->
 
     <!--menuImage-->
     <div class="MenuImage" style="text-align:center"><img src="/team3/DesignImage/Aset.png" alt="menu"></div>
 
     <!--メニュー名-->
-    <h5><?php echo $dayA["menu"];?></h5>
+    <h5>豚バラ焼肉のおろしだれ</h5>
     <br>
     <!--価格・カロリー情報-->
-    <h6>¥<?php echo $dayA["price"];?></h6><h7>カロリー：<?php echo $dayA["cal"];?>kcal</h7>
+    <h6>¥430</h6><h7>カロリー：896kcal</h7>
 
     <!--レビュー吹き出し-->
     <div class="box25">
-      <p><?php echo $starA;?><?php echo $reviewA;?></p>
+      <p>3<br />
+<b>Notice</b>:  Array to string conversion in <b>/home/team3/public_html/Aset.php</b> on line <b>39</b><br />
+Array</p>
     </div>
     <div class="box25">
-      <p><?php echo $starA;?><?php echo $reviewA;?></p>
+      <p>3<br />
+<b>Notice</b>:  Array to string conversion in <b>/home/team3/public_html/Aset.php</b> on line <b>42</b><br />
+Array</p>
     </div>
     <div class="box25">
-      <p><?php echo $starA;?><?php echo $reviewA;?></p>
+      <p>3<br />
+<b>Notice</b>:  Array to string conversion in <b>/home/team3/public_html/Aset.php</b> on line <b>45</b><br />
+Array</p>
     </div>
     <div class="box25">
-      <p><?php echo $starA;?><?php echo $reviewA;?></p>
+      <p>3<br />
+<b>Notice</b>:  Array to string conversion in <b>/home/team3/public_html/Aset.php</b> on line <b>48</b><br />
+Array</p>
     </div>
     <div class="box25">
-      <p><?php echo $starA;?><?php echo $reviewA;?></p>
+      <p>3<br />
+<b>Notice</b>:  Array to string conversion in <b>/home/team3/public_html/Aset.php</b> on line <b>51</b><br />
+Array</p>
     </div>
     <div class="box25">
-      <p><?php echo $starA;?><?php echo $reviewA;?></p>
+      <p>3<br />
+<b>Notice</b>:  Array to string conversion in <b>/home/team3/public_html/Aset.php</b> on line <b>54</b><br />
+Array</p>
     </div>
 
     <!--レビュー書き込みボタン-->
