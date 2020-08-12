@@ -21,22 +21,18 @@
     <!--サブページ設定-->
 
     <!--php-->
-      
+   <?php include 'today.php';?>
+   <?php include 'review_out.php';?>
 
-<!-- <div class="star-rating">
-       <div class="star-rating-front" style="width: 56%">★★★★★</div>
-       <div class="star-rating-back">★★★★★</div>
-   </div>
--->
 
     <!--menuImage-->
     <div class="MenuImage" style="text-align:center"><img src="/team3/DesignImage/Bset.png" alt="menu"></div>
 
     <!--メニュー名-->
-    <h5>麻婆豆腐飯</h5>
+    <h5><?php echo $dayB["menu"];?></h5>
     <br>
     <!--価格・カロリー情報-->
-    <h6>¥370</h6><h7>カロリー：825kcal</h7>
+    <h6>¥<?php echo $dayB["price"];?></h6><h7>カロリー：<?php echo $dayB["cal"];?>kcal</h7>
 
 
 
