@@ -20,7 +20,7 @@
 
   <!--ヘッダー設定-->
   <header class="site-header">
-    <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
+    <button class="logo" name="logo" onclick="location.href='./index.php'"><img src="/team3/DesignImage/logo.png"></button>
     <!--<button class="konzatsu" name="konzatsu"><img src="/team3/DesignImage/level3.png"></button>-->
     <?php require_once 'congestion_out.php'; ?>
     <?php require_once 'today.php'; ?>
@@ -41,7 +41,7 @@
         <!-- ウィンドウの中身 -->
         <div class="popup-content-c">
           <header class="site-header-c">
-            <form method="post" action="TopPage.php">
+            <form method="post" action="index.php">
               <p style="margin-bottom: 1em;">
                 <div style="padding-bottom: 30px;"> 混雑情報投稿</div>
                 <br>
@@ -165,7 +165,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s1">
         <header class="site-header-s1">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayA["menu"]; ?></u>
@@ -193,7 +193,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s2">
         <header class="site-header-s2">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayB["menu"]; ?></u>
@@ -221,7 +221,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s3">
         <header class="site-header-s3">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayN[0]["menu"]; ?></u>
@@ -249,7 +249,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s4">
         <header class="site-header-s4">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayN[1]["menu"]; ?></u>
@@ -277,7 +277,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s5">
         <header class="site-header-s5">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayN[2]["menu"]; ?></u>
@@ -305,7 +305,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s6">
         <header class="site-header-s6">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayN[3]["menu"]; ?></u>
@@ -333,7 +333,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s7">
         <header class="site-header-s7">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayN[4]["menu"]; ?></u>
@@ -361,7 +361,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s8">
         <header class="site-header-s8">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayN[5]["menu"]; ?></u>
@@ -388,7 +388,7 @@
       <!-- ウィンドウの中身 -->
       <div class="popup-content-s9">
         <header class="site-header-s9">
-          <form method="post" action="TopPage.php">
+          <form method="post" action="index.php">
             <p style="margin-bottom: 1em;">
               <div style="padding-bottom: 30px;"> 売切れ情報投稿</div>
               <u><?php echo $dayN[6]["menu"]; ?></u>

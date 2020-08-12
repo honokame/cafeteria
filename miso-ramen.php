@@ -19,7 +19,7 @@
 <body>
   <!--ヘッダー設定-->
   <header class="site-header">
-    <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
+    <button class="logo" name="logo" onclick="location.href='./index.php'"><img src="/team3/DesignImage/logo.png"></button>
     
     <!--php-->
     <?php require_once 'congestion_out.php'; ?>
@@ -41,7 +41,7 @@
         <!-- ウィンドウの中身 -->
         <div class="popup-content-c">
           <header class="site-header-c">
-            <form method="post" action="TopPage.php">
+            <form method="post" action="index.php">
               <p style="margin-bottom: 1em;">
                 <div style="padding-bottom: 30px;"> 混雑情報投稿</div>
                 <br>
@@ -164,7 +164,7 @@
 
       <!-- ウィンドウの中身 -->
       <div class="popup-content">
-        <form action="TopPage.php" method="post">
+        <form action="index.php" method="post">
           <p style="margin-bottom: 1em;">
             <p align="left"><u>ラーメン</u></p>
             <p style="margin-bottom:1em;">
