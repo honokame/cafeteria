@@ -55,7 +55,7 @@ div.hero img{
 p{
   font-size: 25px;
   text-align: center;
-  line-height: 40px;
+  line-height: 35px;
 }
 
 h2{ /*「きょうのメニュー」*/
@@ -279,33 +279,6 @@ button.button_urikire {
   border: none;
   padding: 3px;
   background: #ffffff;
-}
-
-
-
-/*カレンダー*/
-div.L_column{
-  z-index: 3;
-  width: 33%;
-  float:left;
-  margin: auto;
-  text-align: center;
-}
-
-div.C_column{
-  z-index: 3;
-  width: 33%;
-  float:left;
-  margin: auto;
-  text-align: center;
-}
-
-div.R_column{
-  z-index: 3;
-  width: 33%;
-  float:left;
-  margin: auto;
-  text-align: center;
 }
 
 
