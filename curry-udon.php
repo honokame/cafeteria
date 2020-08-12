@@ -20,14 +20,12 @@
   <!--ヘッダー設定-->
   <header class="site-header">
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
-    <!--<button class="konzatsu"><img src="/team3/DesignImage/level3.png" name="konzatsu"></button>-->
+    
     <!--php-->
     <?php require_once 'congestion_out.php'; ?>
     <?php require_once 'today.php'; ?>
     <?php require_once 'review_out.php'; ?>
     <?php require_once 'result_congestion.php';?>
-
-
 
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
@@ -62,8 +60,6 @@
 
   <!--サブページ設定-->
 
-
-
   <!--menuImage-->
   <div class="MenuImage" style="text-align:center"><img src="/team3/DesignImage/curry-udon.png" alt="menu"></div>
 
@@ -81,7 +77,6 @@
   </h6>
 
   <!--レビュー吹き出し-->
-  <!--var_dump($reviewA);-->
   <div class="box25">
     <nobr>
       <div class="star-rating">

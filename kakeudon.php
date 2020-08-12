@@ -20,27 +20,18 @@
   <!--ヘッダー設定-->
   <header class="site-header">
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
-    <!--<button class="konzatsu"><img src="/team3/DesignImage/level3.png" name="konzatsu"></button>-->
+    
     <!--php-->
-    <html>
-<head><title>sold</title></head>
-<body>
-</body>
-</html>
-        
-
-<!-- <div class="star-rating">
-       <div class="star-rating-front" style="width: 56%">★★★★★</div>
-       <div class="star-rating-back">★★★★★</div>
-   </div>
--->    
-
+    <?php require_once 'congestion_out.php'; ?>
+    <?php require_once 'today.php'; ?>
+    <?php require_once 'review_out.php'; ?>
+    <?php require_once 'result_congestion.php';?>
 
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
 
       <label for="popup-on-c">
-        <div class="btn-open-c"><img src="/team3/DesignImage/level1.png"></div>
+        <div class="btn-open-c"><img src="/team3/DesignImage/<?php echo $status; ?>"></div>
       </label>
       <input type="checkbox" id="popup-on-c">
 
@@ -69,32 +60,30 @@
 
   <!--サブページ設定-->
 
-
-
   <!--menuImage-->
   <div class="MenuImage" style="text-align:center"><img src="/team3/DesignImage/kakeudon.png" alt="menu"></div>
 
   <!--メニュー名-->
-  <h5>うどん</h5>
+  <h5><?php echo $dayN[5]["menu"]; ?></h5>
   <br>
   <!--価格・カロリー情報-->
-  <h6>¥200&nbsp;&nbsp;&nbsp;カロリー：375kcal</h6>
+  <h6>¥<?php echo $dayN[5]["price"]; ?>&nbsp;&nbsp;&nbsp;カロリー：<?php echo $dayN[5]["cal"]; ?>kcal</h6>
 
   <!--総合評価-->
   <h6>
     <div class="star-rating">
-      <div class="star-rating-front" style="width: 80%">★★★★★</div>
+      <div class="star-rating-front" style="width: <?= $starF * 20 ?>%">★★★★★</div>
       <div class="star-rating-back">★★★★★</div>
   </h6>
 
   <!--レビュー吹き出し-->
-  <!--var_dump($reviewA);-->
   <div class="box25">
     <nobr>
       <div class="star-rating">
-        <div class="star-rating-front" style="width: 80%">★★★★★</div>
+        <div class="star-rating-front" style="width: <?= $reviewF[0]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
-          &nbsp;    </nobr>
+          &nbsp;<?php echo $reviewF[0]["body"]; ?></div>
+    </nobr>
   </div>
   </div>
   </div>
@@ -102,10 +91,10 @@
   <div class="box26">
     <nobr>
       <div class="star-rating">
-        <div class="star-rating-front" style="width: 80%">★★★★★</div>
+        <div class="star-rating-front" style="width: <?= $reviewF[1]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
           &nbsp;
-          </div>
+          <?php echo $reviewF[1]["body"]; ?></div>
     </nobr>
   </div>
   </div>
@@ -114,18 +103,10 @@
   <div class="box27">
     <nobr>
       <div class="star-rating">
-        <div class="star-rating-front" style="width: <br />
-<b>Notice</b>:  Undefined offset: 2 in <b>/home/team3/public_html/kakeudon.php</b> on line <b>111</b><br />
-<br />
-<b>Notice</b>:  Trying to access array offset on value of type null in <b>/home/team3/public_html/kakeudon.php</b> on line <b>111</b><br />
-0%">★★★★★</div>
+        <div class="star-rating-front" style="width: <?= $reviewF[2]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
           &nbsp;
-          <br />
-<b>Notice</b>:  Undefined offset: 2 in <b>/home/team3/public_html/kakeudon.php</b> on line <b>114</b><br />
-<br />
-<b>Notice</b>:  Trying to access array offset on value of type null in <b>/home/team3/public_html/kakeudon.php</b> on line <b>114</b><br />
-</div>
+          <?php echo $reviewF[2]["body"]; ?></div>
     </nobr>
   </div>
   </div>
@@ -134,18 +115,10 @@
   <div class="box28">
     <nobr>
       <div class="star-rating">
-        <div class="star-rating-front" style="width: <br />
-<b>Notice</b>:  Undefined offset: 3 in <b>/home/team3/public_html/kakeudon.php</b> on line <b>123</b><br />
-<br />
-<b>Notice</b>:  Trying to access array offset on value of type null in <b>/home/team3/public_html/kakeudon.php</b> on line <b>123</b><br />
-0%">★★★★★</div>
+        <div class="star-rating-front" style="width: <?= $reviewF[3]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
           &nbsp;
-          <br />
-<b>Notice</b>:  Undefined offset: 3 in <b>/home/team3/public_html/kakeudon.php</b> on line <b>126</b><br />
-<br />
-<b>Notice</b>:  Trying to access array offset on value of type null in <b>/home/team3/public_html/kakeudon.php</b> on line <b>126</b><br />
-</div>
+          <?php echo $reviewF[3]["body"]; ?></div>
     </nobr>
   </div>
   </div>
@@ -154,18 +127,10 @@
   <div class="box29">
     <nobr>
       <div class="star-rating">
-        <div class="star-rating-front" style="width: <br />
-<b>Notice</b>:  Undefined offset: 4 in <b>/home/team3/public_html/kakeudon.php</b> on line <b>135</b><br />
-<br />
-<b>Notice</b>:  Trying to access array offset on value of type null in <b>/home/team3/public_html/kakeudon.php</b> on line <b>135</b><br />
-0%">★★★★★</div>
+        <div class="star-rating-front" style="width: <?= $reviewF[4]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
           &nbsp;
-          <br />
-<b>Notice</b>:  Undefined offset: 4 in <b>/home/team3/public_html/kakeudon.php</b> on line <b>138</b><br />
-<br />
-<b>Notice</b>:  Trying to access array offset on value of type null in <b>/home/team3/public_html/kakeudon.php</b> on line <b>138</b><br />
-</div>
+          <?php echo $reviewF[4]["body"]; ?></div>
     </nobr>
   </div>
   </div>
@@ -174,17 +139,10 @@
   <div class="box30">
     <nobr>
       <div class="star-rating">
-        <div class="star-rating-front" style="width: <br />
-<b>Notice</b>:  Undefined offset: 5 in <b>/home/team3/public_html/kakeudon.php</b> on line <b>147</b><br />
-<br />
-<b>Notice</b>:  Trying to access array offset on value of type null in <b>/home/team3/public_html/kakeudon.php</b> on line <b>147</b><br />
-0%">★★★★★</div>
+        <div class="star-rating-front" style="width: <?= $reviewF[5]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
           &nbsp;
-          <br />
-<b>Notice</b>:  Undefined offset: 5 in <b>/home/team3/public_html/kakeudon.php</b> on line <b>150</b><br />
-<br />
-<b>Notice</b>:  Trying to access array offset on value of type null in <b>/home/team3/public_html/kakeudon.php</b> on line <b>150</b><br />
+          <?php echo $reviewF[5]["body"]; ?>
         </div>
     </nobr>
   </div>

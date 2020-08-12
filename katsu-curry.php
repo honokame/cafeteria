@@ -20,10 +20,12 @@
   <!--ヘッダー設定-->
   <header class="site-header">
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
+    
+    <!--php-->
     <?php require_once 'congestion_out.php'; ?>
     <?php require_once 'today.php'; ?>
     <?php require_once 'review_out.php'; ?>
-    <?php require_once 'result_congestion.php'; ?>
+    <?php require_once 'result_congestion.php';?>
 
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
@@ -58,11 +60,6 @@
 
   <!--サブページ設定-->
 
-  <!--php-->
-  <?php require_once 'today.php'; ?>
-  <?php require_once 'review_out.php'; ?>
-
-
   <!--menuImage-->
   <div class="MenuImage" style="text-align:center"><img src="/team3/DesignImage/katsu-curry.png" alt="menu"></div>
 
@@ -80,13 +77,12 @@
   </h6>
 
   <!--レビュー吹き出し-->
-  <!--var_dump($reviewB);-->
   <div class="box25">
     <nobr>
       <div class="star-rating">
         <div class="star-rating-front" style="width: <?= $reviewB[0]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
-          &nbsp;<?php echo $reviewB[0]["body"]; ?>
+          &nbsp;<?php echo $reviewB[0]["body"]; ?></div>
     </nobr>
   </div>
   </div>
