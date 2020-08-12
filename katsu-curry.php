@@ -17,10 +17,13 @@
 </head>
 
 <body>
-<!--ヘッダー設定-->
+  <!--ヘッダー設定-->
   <header class="site-header">
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
-   <?php require_once 'congestion_out.php'; ?>
+    <?php require_once 'congestion_out.php'; ?>
+    <?php require_once 'today.php'; ?>
+    <?php require_once 'review_out.php'; ?>
+    <?php require_once 'result_congestion.php'; ?>
 
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
@@ -142,9 +145,9 @@
       <div class="star-rating">
         <div class="star-rating-front" style="width: <?= $reviewB[5]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
-        &nbsp;
-        <?php echo $reviewB[5]["body"]; ?>
-      </div>
+          &nbsp;
+          <?php echo $reviewB[5]["body"]; ?>
+        </div>
     </nobr>
   </div>
   </div>

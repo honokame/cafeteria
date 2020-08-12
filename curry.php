@@ -21,7 +21,13 @@
   <header class="site-header">
     <button class="logo" name="logo" onclick="location.href='./TopPage.php'"><img src="/team3/DesignImage/logo.png"></button>
     <!--<button class="konzatsu"><img src="/team3/DesignImage/level3.png" name="konzatsu"></button>-->
+    <!--php-->
     <?php require_once 'congestion_out.php'; ?>
+    <?php require_once 'today.php'; ?>
+    <?php require_once 'review_out.php'; ?>
+    <?php require_once 'result_congestion.php';?>
+
+
 
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
@@ -56,9 +62,7 @@
 
   <!--サブページ設定-->
 
-  <!--php-->
-  <?php require_once 'today.php'; ?>
-  <?php require_once 'review_out.php'; ?>
+
 
   <!--menuImage-->
   <div class="MenuImage" style="text-align:center"><img src="/team3/DesignImage/curry.png" alt="menu"></div>
@@ -142,9 +146,9 @@
       <div class="star-rating">
         <div class="star-rating-front" style="width: <?= $reviewA[5]["eval"] * 20 ?>%">★★★★★</div>
         <div class="star-rating-back">★★★★★
-        &nbsp;
-        <?php echo $reviewA[5]["body"]; ?>
-      </div>
+          &nbsp;
+          <?php echo $reviewA[5]["body"]; ?>
+        </div>
     </nobr>
   </div>
   </div>

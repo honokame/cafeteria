@@ -27,7 +27,7 @@
     <?php require_once 'review_out.php'; ?>
     <?php require_once 'result_congestion.php'; ?>
     <?php require_once 'result_sold.php'; ?>
-
+    <?php require_once 'result_review.php';?>
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
       <label for="popup-on-c">
