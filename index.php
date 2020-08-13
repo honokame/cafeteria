@@ -28,6 +28,7 @@
     <?php require_once 'result_congestion.php'; ?>
     <?php require_once 'result_sold.php'; ?>
     <?php require_once 'result_review.php';?>
+
     <!-- 混雑情報ポップアップ -->
     <div class="pop-box-c">
       <label for="popup-on-c">
@@ -155,7 +156,7 @@
   <!--売り切れボタン配置、ポップアップ-->
   <div class="pop-box-s1">
     <label for="popup-on-s1">
-      <div class="btn-open-s1"><img src="/team3/<?php echo $cross1; ?>" alt="送信"></div>
+      <div class="btn-open-s1"><img src="/team3/DesignImage/<?php echo $dayA["image"]; ?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s1">
 
@@ -175,7 +176,7 @@
               <input id="btn-select-s1" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayA["menu"]; ?>>
-              <input id="btn-send-s1" type="submit" value="投稿" name="send_1">
+              <input id="btn-send-s1" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -183,7 +184,7 @@
 
   <div class="pop-box-s2">
     <label for="popup-on-s2">
-      <div class="btn-open-s2"><img src="/team3/<?php echo $cross2; ?>" alt="送信"></div>
+      <div class="btn-open-s2"><img src="/team3/DesignImage/<?php echo $dayB["image"]; ?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s2">
 
@@ -203,7 +204,7 @@
               <input id="btn-select-s2" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayB["menu"]; ?>>
-              <input id="btn-send-s2" type="submit" value="投稿" name="send_2">
+              <input id="btn-send-s2" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -211,7 +212,7 @@
 
   <div class="pop-box-s3">
     <label for="popup-on-s3">
-      <div class="btn-open-s3"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s3"><img src="/team3/DesignImage/<?php echo $dayN[0]["image"];?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s3">
 
@@ -231,7 +232,7 @@
               <input id="btn-select-s3" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayN[0]["menu"]; ?>>
-              <input id="btn-send-s3" type="submit" value="投稿" name="send">
+              <input id="btn-send-s3" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -239,7 +240,7 @@
 
   <div class="pop-box-s4">
     <label for="popup-on-s4">
-      <div class="btn-open-s4"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s4"><img src="/team3/DesignImage/<?php echo $dayN[1]["image"];?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s4">
 
@@ -259,7 +260,7 @@
               <input id="btn-select-s4" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayN[1]["menu"]; ?>>
-              <input id="btn-send-s4" type="submit" value="投稿" name="send">
+              <input id="btn-send-s4" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -267,7 +268,7 @@
 
   <div class="pop-box-s5">
     <label for="popup-on-s5">
-      <div class="btn-open-s5"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s5"><img src="/team3/DesignImage/<?php echo $dayN[2]["image"];?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s5">
 
@@ -287,7 +288,7 @@
               <input id="btn-select-s5" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayN[2]["menu"]; ?>>
-              <input id="btn-send-s5" type="submit" value="投稿" name="send">
+              <input id="btn-send-s5" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -295,7 +296,7 @@
 
   <div class="pop-box-s6">
     <label for="popup-on-s6">
-      <div class="btn-open-s6"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s6"><img src="/team3/DesignImage/<?php echo $dayN[3]["image"];?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s6">
 
@@ -315,7 +316,7 @@
               <input id="btn-select-s6" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayN[3]["menu"]; ?>>
-              <input id="btn-send-s6" type="submit" value="投稿" name="send">
+              <input id="btn-send-s6" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -323,7 +324,7 @@
 
   <div class="pop-box-s7">
     <label for="popup-on-s7">
-      <div class="btn-open-s7"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s7"><img src="/team3/DesignImage/<?php echo $dayN[4]["image"];?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s7">
 
@@ -343,7 +344,7 @@
               <input id="btn-select-s7" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayN[4]["menu"]; ?>>
-              <input id="btn-send-s7" type="submit" value="投稿" name="send">
+              <input id="btn-send-s7" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -351,7 +352,7 @@
 
   <div class="pop-box-s8">
     <label for="popup-on-s8">
-      <div class="btn-open-s8"><img src="/team3/DesignImage/urikire.png" alt="送信"></div>
+      <div class="btn-open-s8"><img src="/team3/DesignImage/<?php echo $dayN[5]["image"];?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s8">
 
@@ -371,7 +372,7 @@
               <input id="btn-select-s8" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayN[5]["menu"]; ?>>
-              <input id="btn-send-s8" type="submit" value="投稿" name="send">
+              <input id="btn-send-s8" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -379,6 +380,7 @@
 
   <div class="pop-box-s9">
     <label for="popup-on-s9">
+      <div class="btn-open-s9"><img src="/team3/DesignImage/<?php echo $dayN[6]["image"];?>" alt="送信"></div>
     </label>
     <input type="checkbox" id="popup-on-s9">
 
@@ -398,7 +400,7 @@
               <input id="btn-select-s9" type="radio" name="button" value=true>売切れ
               <br>
               <input type="hidden" name="soldmenu" value=<?php echo $dayN[6]["menu"]; ?>>
-              <input id="btn-send-s9" type="submit" value="投稿" name="send">
+              <input id="btn-send-s9" type="submit" value="投稿" name="send2">
           </form>
       </div>
     </div>
@@ -453,7 +455,7 @@
   <div style="width:100%;margin-top:30px;">
     <div class="l-border l-p-t l-p-r l-p-b l-p-l" style="margin:10px 50px;padding:15px;word-break:break-all;color:#333;box-shadow:1px 1px 2px rgba(0,0,0,0.3);background:url(https://stat.ameba.jp/user_images/20141029/18/wazameba/e8/9d/p/o0300030013113018873.png);border-radius:10px;">
       <div style="background:rgba(255,255,255,0.85);padding:5px;border-radius:5px;text-align:center;">
-        <div style="border:2px dashed #545454;border-radius:5px;padding-top:30px;padding-bottom:30px;"><?php echo $weekA[4]["date"];?></b><br>Aセット：<?php echo $weekA[4]["menu"]; ?><br>Bセット：<?php echo $weekB[4]["menu"]; ?></div>
+        <div style="border:2px dashed #545454;border-radius:5px;padding-top:30px;padding-bottom:30px;"><b><?php echo $weekA[4]["date"];?></b><br>Aセット：<?php echo $weekA[4]["menu"]; ?><br>Bセット：<?php echo $weekB[4]["menu"]; ?></div>
       </div>
     </div>
   </div>
