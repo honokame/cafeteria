@@ -70,7 +70,6 @@
   <!--メニューレイアウト・ボタン設定-->
   <!--php-->
   <!--当日メニュー配置-->
-  <link rel="stylesheet" href="popup.css">
   <div class="Aset">
     <button class="button_A" type="submit" name="A" onclick="location.href='./Aset.php'"><img src="/team3/DesignImage/Aset.png" alt="送信" />Aset</button>
     <p><b><?php echo $dayA["menu"]; ?></b></p>
@@ -91,64 +90,72 @@
   <div class="left">
     <button class="button_curry" type="submit" name="curry" onclick="location.href='./curry.php'"><img src="/team3/DesignImage/curry.png" alt="送信" /></button>
     <p><b><?php echo $dayN[0]["menu"]; ?></b></p>
-    <p>¥<?php echo $dayN[0]["price"]; ?></p>
+    <h7>
     <div class="star-rating">
       <div class="star-rating-front" style="width: <?= $starA * 20 ?>%">★★★★★</div>
       <div class="star-rating-back">★★★★★</div>
     </div>
+    ¥<?php echo $dayN[0]["price"]; ?></h7>
 
     <button class="button_miso-ramen" type="submit" name="miso-ramen" onclick="location.href='./miso-ramen.php'"><img src="/team3/DesignImage/miso-ramen.png" alt="送信" /></button>
     <p><b><?php echo $dayN[3]["menu"]; ?></b></p>
-    <p>¥<?php echo $dayN[3]["price"]; ?></p>
+    <h7>
     <div class="star-rating">
       <div class="star-rating-front" style="width: <?= $starD * 20 ?>%">★★★★★</div>
       <div class="star-rating-back">★★★★★</div>
     </div>
+    ¥<?php echo $dayN[3]["price"]; ?></h7>
   </div>
 
   <div class="center">
     <button class="button_katsu-curry" type="submit" name="katsu-curry" onclick="location.href='./katsu-curry.php'"><img src="/team3/DesignImage/katsu-curry.png" alt="送信" /></button>
     <p><b><?php echo $dayN[1]["menu"]; ?></b></p>
-    <p>¥<?php echo $dayN[1]["price"]; ?></p>
+    <h7>
     <div class="star-rating">
       <div class="star-rating-front" style="width: <?= $starB * 20 ?>%">★★★★★</div>
       <div class="star-rating-back">★★★★★</div>
     </div>
+    ¥<?php echo $dayN[2]["price"]; ?></h7>
+
 
     <button class="button_kakesoba" type="submit" name="kakesoba" onclick="location.href='./kakesoba.php'"><img src="/team3/DesignImage/kakesoba.png" alt="送信" /></button>
     <p><b><?php echo $dayN[4]["menu"]; ?></b></p>
-    <p>¥<?php echo $dayN[4]["price"]; ?></p>
+    <h7>
     <div class="star-rating">
       <div class="star-rating-front" style="width: <?= $starE * 20 ?>%">★★★★★</div>
       <div class="star-rating-back">★★★★★</div>
     </div>
+    ¥<?php echo $dayN[1]["price"]; ?></h7>
   </div>
 
   <div class="right">
     <button class="button_curry-udon" type="submit" name="curry-udon" onclick="location.href='./curry-udon.php'"><img src="/team3/DesignImage/curry-udon.png" alt="送信" /></button>
     <p><b><?php echo $dayN[2]["menu"]; ?></b></p>
-    <p>¥<?php echo $dayN[2]["price"]; ?></p>
+    <h7>
     <div class="star-rating">
       <div class="star-rating-front" style="width: <?= $starC * 20 ?>%">★★★★★</div>
       <div class="star-rating-back">★★★★★</div>
     </div>
+    ¥<?php echo $dayN[2]["price"]; ?></h7>
 
     <button class="button_kakeudon" type="submit" name="kakeudon" onclick="location.href='./kakeudon.php'"><img src="/team3/DesignImage/kakeudon.png" alt="送信" /></button>
     <p><b><?php echo $dayN[5]["menu"]; ?></b></p>
-    <p>¥<?php echo $dayN[5]["price"]; ?></p>
+    <h7>
     <div class="star-rating">
       <div class="star-rating-front" style="width: <?= $starF * 20 ?>%">★★★★★</div>
       <div class="star-rating-back">★★★★★</div>
     </div>
+    ¥<?php echo $dayN[5]["price"]; ?></h7>
   </div>
 
   <button class="button_rice" type="submit" name="rice" onclick="location.href='./rice.php'"><img src="/team3/DesignImage/rice.png" alt="送信" /></button>
   <p><b><?php echo $dayN[6]["menu"]; ?></b></p>
-  <p>¥<?php echo $dayN[6]["price"]; ?></p>
+  <h7>
   <div class="star-rating">
     <div class="star-rating-front" style="width: <?= $starG * 20 ?>%">★★★★★</div>
     <div class="star-rating-back">★★★★★</div>
   </div>
+  ¥<?php echo $dayN[6]["price"]; ?></h7>
 
 
 

@@ -2,8 +2,8 @@
   position: relative;
   width: 5em;
   height: 1em;
-  font-size: 25px;
-
+  font-size: 30px;
+  text-align: center;
 }
 .star-rating-front {
   position: absolute;
@@ -13,5 +13,5 @@
   color: #ffcc33;
 }
 .star-rating-back {
-  color: #fff;
+  color: #ccc;
 }

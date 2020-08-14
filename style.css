@@ -83,17 +83,17 @@ h5{ /*「メニュー名」*/
 }
 
 h6{ /*「価格」*/
-  margin-top: 30px;
-  text-align: left;
-  margin-left: 60px;
+  margin-top: 10px;
+  text-align: right;
+  margin-right: 60px;
+  margin-left: 800px;
   font-size: 35px;
 }
 
-h7{ /*「カロリー」*/
-  margin-top: 30px;
-  text-align: right;
-  margin-right: 50px;
-  font-size: 25px;
+h7{
+  margin: 0;
+  text-align: center;
+  font-size: 35px;
 }
 
 
@@ -331,6 +331,7 @@ div.MenuImage img{
     position: left;
     margin: 0;
     padding: 0;
+    font-size: 50px;
 }
 
 .box26{
@@ -507,7 +508,7 @@ button.button_review{
 .evaluation label .text {
   position: absolute;
   text-align: left;
-  font-size: 20px;
+  font-size: 80px;
   color: gray;
 }
 

@@ -1,7 +1,7 @@
 <?php
 $disp_enc="UTF-8";
 
-$conn = pg_connect("host=localhost dbname=team3db user=team3 password=1qazxsw23edc") or die("error1");
+$conn = pg_connect("host=localhost dbname=team3db user=team3 password=oshkmr1435") or die("error1");
 
 if(isset($_POST['send1'])){
 $value = $_POST['button'];
