@@ -6,8 +6,8 @@
 // echo $date["mon"];
 // echo $date["mday"];
 
-$today = date('Y-m-d');
-//$today = '2020-07-27';
+//$today = date('Y-m-d');
+$today = '2020-08-21';
 //echo "今日は".$today."\n";
 
 // データベース接続設定
@@ -36,7 +36,8 @@ function conv_dbdata($string,$enc){
 $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
 
 // データを取り出す
-$sql = "SELECT * FROM menu ORDER BY date";
+//$sql = "SELECT * FROM menu ORDER BY date";
+$sql = "SELECT * FROM menu ORDER BY type ASC";
 $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 
 // A,Bセット読み込み 
@@ -67,27 +68,42 @@ for($i = 0;$i < pg_numrows($res);$i++){
 $row = pg_fetch_all($res); 
 $dayN = array(); // 常設メニューの配列
 
-foreach($row as $normal){ // normalにrowNを順番に入れる  
-  // 常設のみdayN配列に格納
-  if($normal["type"] == 2){
-    array_push($dayN,$normal);
+foreach ($row as $norma1) {
+  if ($norma1["type"] >= 3) {
+    if (strtotime($today) > strtotime($norma1["date"])) {
+      $menu = $norma1["menu"];
+      $sql2 = "UPDATE menu SET date='$today' where menu='$menu'";
+      $res2 = pg_query($dbconn, $sql2) or die("erroe2");
+      $sql3 = "UPDATE menu SET sold=false where menu='$menu'";
+      $res3 = pg_query($dbconn, $sql3) or die("erroe3");
+      $sql4 = "UPDATE menu SET image='hanbaityu.png' where menu='$menu'";
+      $res4 = pg_query($dbconn, $sql4) or die("erroe4");
+    }
   }
 }
+
+foreach ($row as $normal) { // normalにrowNを順番に入れる  
+  // 常設のみdayN配列に格納
+  if ($normal["type"] >= 3) {
+    array_push($dayN, $normal);
+  }
+}
+
 
 // 週間メニュー読み込み
 $weekA = array();
 $weekB = array();
 
-foreach($row as $week){
-  
+foreach ($row as $week) {
+
   // 当日以降のメニューのみ
-  if(strtotime($today) < strtotime($week["date"])){ 
-    if($week["type"] == 0){
-      array_push($weekA,$week);
+  if (strtotime($today) < strtotime($week["date"])) {
+    if ($week["type"] == 0) {
+      array_push($weekA, $week);
     }
-   // else if($week["type"] == 1){
-   if($week["type"] == 1){
-      array_push($weekB,$week);
+    // else if($week["type"] == 1){
+    if ($week["type"] == 1) {
+      array_push($weekB, $week);
     }
   }
 }
@@ -102,5 +118,3 @@ foreach($row as $week){
 //}
 // 接続を解除
 //pg_close($dbconn);
-
-?>
