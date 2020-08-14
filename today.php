@@ -14,7 +14,7 @@ $today = date('Y-m-d');
 $sv = "localhost";
 $name = "team3db";
 $user = "team3";
-$pass = "1qazxsw23edc";
+$pass = "oshkmr1435";
 
 // 表示文字コード
 $display_enc = "UTF-8";
@@ -49,6 +49,7 @@ for($i = 0;$i < pg_numrows($res);$i++){
     $dayA["price"] = $row["price"];
     $dayA["cal"] = $row["cal"];
     $dayA["sold"] = $row["sold"];
+    $dayA["image"] = $row["image"];
   }
 
   // Bセット
@@ -58,6 +59,7 @@ for($i = 0;$i < pg_numrows($res);$i++){
     $dayB["price"] = $row["price"];
     $dayB["cal"] = $row["cal"];
     $dayB["sold"] = $row["sold"];
+    $dayB["image"] = $row["image"];
   }
 }
 
