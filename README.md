@@ -1,7 +1,7 @@
 # cafeteria 
-`index.php` : トップページ
-`style.css` : トップページ・サブページ・レビューフォーム
-`popup.css` : 混雑フォーム・売り切れフォーム
+`index.php` : トップページ 
+`style.css` : トップページ・サブページ・レビューフォーム 
+`popup.css` : 混雑フォーム・売り切れフォーム 
 `star.css `  : 総合評価  
 
 # Requirment
