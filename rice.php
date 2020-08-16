@@ -67,7 +67,7 @@
   <h5><?php echo $dayN[6]["menu"]; ?></h5>
   <br>
   <!--価格・カロリー情報-->
-  <h6>¥<?php echo $dayN[6]["price"]; ?>&nbsp;&nbsp;&nbsp;カロリー：<?php echo $dayN[6]["cal"]; ?>kcal</h6>
+  <h6>¥<?php echo $dayN[6]["price"]; ?><br><?php echo $dayN[6]["cal"]; ?>kcal</h6>
 
   <!--総合評価-->
   <h6>
