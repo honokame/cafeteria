@@ -27,7 +27,7 @@ $display_enc = "UTF-8";
 $dbconn = pg_connect("host = $sv dbname = $name user = $user password = $pass") or die("接続エラー");
 
 // データを取り出す
-$sql = "SELECT * FROM review1 ORDER BY date DESC";
+$sql = "SELECT * FROM review ORDER BY date DESC";
 $res = pg_query($dbconn,$sql) or die("データ読み込みエラー");
 
 

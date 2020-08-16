@@ -28,7 +28,7 @@ if (isset($_POST['send'])) {
   }
 
   $comment = h($_POST["comment"]);
-  $sql = "INSERT INTO review1 VALUES('$menu',$star,'$comment','$time')";
+  $sql = "INSERT INTO review VALUES('$menu',$star,'$comment','$time')";
   $res = pg_query($dbconn, $sql) or die("データ読み込みエラー");
 }
 ?>
